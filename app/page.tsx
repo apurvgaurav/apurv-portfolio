@@ -48,7 +48,10 @@ export default function Home() {
   return (
     <main className="space-y-16">
       {/* HERO */}
-      <section className="grid gap-10 md:grid-cols-[3fr,2fr] items-center">
+      <section
+        id="hero"
+        className="grid items-center gap-10 md:grid-cols-[3fr,2fr]"
+      >
         <div className="space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs font-medium text-slate-300">
             <span className="h-2 w-2 rounded-full bg-emerald-400" />
@@ -103,7 +106,7 @@ export default function Home() {
           </div>
 
           <p className="max-w-xl text-sm text-slate-400">
-            I design and ship **LLM safety and governance products** that are
+            I design and ship LLM safety and governance products that are
             testable, debuggable, and patent-backed. This portfolio highlights
             my end-to-end product thinking from problem framing to architecture,
             experiments, and GTM narrative.
@@ -139,7 +142,7 @@ export default function Home() {
           </div>
 
           <div className="mt-5 rounded-xl border border-emerald-500/40 bg-emerald-500/5 px-3 py-3 text-xs text-emerald-200">
-            Building a portfolio that demonstrates **repeatable patterns**:
+            Building a portfolio that demonstrates repeatable patterns:
             deterministic safety, offline-by-design, audit trails, and
             patent-grade architecture — not just pretty demos.
           </div>
@@ -202,24 +205,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PATENTS */}
+      <section id="patents" className="space-y-4">
+        <h2 className="text-xl font-semibold text-slate-50 sm:text-2xl">
+          Patents
+        </h2>
+        <p className="max-w-2xl text-sm text-slate-300">
+          I have filed multiple non-provisional USPTO patents as an independent
+          inventor, focused on deterministic safety engines, edge-deployed LLMs,
+          and governance frameworks. Selected examples:
+        </p>
+        <ul className="space-y-2 text-sm text-slate-300">
+          <li>
+            • <span className="font-semibold">Edge-Deployed LLM V2</span> –
+            Privacy-preserving offline LLM architecture with self-forgetting
+            memory and on-device alignment debugger.
+          </li>
+          <li>
+            • <span className="font-semibold">AI Risk Navigator V2</span> – 
+            deterministic multi-axis risk engine for hallucination, bias, and
+            latency anomalies.
+          </li>
+          <li>
+            • <span className="font-semibold">LLM Code Safety Auditor</span> – 
+            offline, rule-based engine for secure code evaluation and
+            remediation (docketed – ready for examination).
+          </li>
+        </ul>
+        <p className="text-xs text-slate-500">
+          Full list, application numbers, and statuses available on request for
+          roles requiring detailed IP review.
+        </p>
+      </section>
+
+      {/* PUBLICATIONS */}
+      <section id="publications" className="space-y-4">
+        <h2 className="text-xl font-semibold text-slate-50 sm:text-2xl">
+          Publications & research
+        </h2>
+        <p className="max-w-2xl text-sm text-slate-300">
+          My research focuses on bridging practical product constraints
+          (latency, privacy, infra limits) with rigorous evaluation of LLM
+          systems. Highlights include work on neuromorphic–photonic accelerators
+          for LLM inference and deterministic moderation engines.
+        </p>
+        <p className="text-xs text-slate-500">
+          Detailed list of accepted and under-review papers (with venues like
+          Frontiers in AI, IEEE) will be added here as camera-ready versions
+          are finalized.
+        </p>
+      </section>
+
       {/* ABOUT / POSITIONING */}
-      <section className="grid gap-8 md:grid-cols-2">
+      <section id="about" className="grid gap-8 md:grid-cols-2">
         <div className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-50 sm:text-2xl">
             Product philosophy
           </h2>
           <p className="text-sm text-slate-300">
-            I operate like a **L7/L8 AI Product Manager**: start from
-            real-world constraints (privacy, regulation, infra limits), design
+            I operate like a L7/L8 AI Product Manager: start from real-world
+            constraints (privacy, regulation, infra limits), design
             deterministic systems around them, and then layer AI where it
             actually adds leverage — not just hype.
           </p>
           <p className="text-sm text-slate-300">
-            My work combines **hands-on prototyping** (Next.js, Python,
-            Streamlit, FastAPI), **research** (peer-reviewed papers and
-            conference submissions), and **patent-backed architectures** to
-            create assets that can withstand scrutiny from legal, security, and
-            VPs at FAANG-scale companies.
+            My work combines hands-on prototyping (Next.js, Python, Streamlit,
+            FastAPI), research (peer-reviewed papers and conference submissions),
+            and patent-backed architectures to create assets that can withstand
+            scrutiny from legal, security, and VPs at FAANG-scale companies.
           </p>
         </div>
 
@@ -229,16 +282,16 @@ export default function Home() {
           </h3>
           <ul className="mt-2 space-y-2 text-xs text-slate-300">
             <li>
-              • Owning **end-to-end AI safety / governance products** from
-              problem definition to v1 launch.
+              • Owning end-to-end AI safety / governance products from problem
+              definition to v1 launch.
             </li>
             <li>
-              • Translating legal / compliance requirements into **deterministic
-              technical systems** that engineering can actually build.
+              • Translating legal / compliance requirements into deterministic
+              technical systems that engineering can actually build.
             </li>
             <li>
               • Creating patent-ready architectures and research artifacts to
-              strengthen your **AI product moat**.
+              strengthen your AI product moat.
             </li>
             <li>
               • Leading cross-functional reviews with security, legal, infra,
@@ -249,7 +302,10 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="space-y-4 border-t border-slate-800 pt-8">
+      <section
+        id="contact"
+        className="space-y-4 border-t border-slate-800 pt-8"
+      >
         <h2 className="text-xl font-semibold text-slate-50 sm:text-2xl">
           Contact & opportunities
         </h2>
