@@ -10,7 +10,8 @@
 
   html,
   body {
-    @apply bg-slate-950 text-slate-100 antialiased;
+    /* Use slate-900 instead of 950 to avoid unknown utility errors */
+    @apply bg-slate-900 text-slate-100 antialiased;
   }
 
   body {
@@ -26,8 +27,7 @@
   }
 }
 
-/* Optional: smooth scroll for nav links */
+/* Smooth scrolling for in-page links */
 html {
   scroll-behavior: smooth;
 }
-
