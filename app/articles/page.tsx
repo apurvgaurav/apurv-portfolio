@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Articles",
+  description:
+    "Writing at the intersection of infrastructure, deterministic AI safety, and senior AI product strategy.",
+};
+
+
 type ArticleStatus = "Published" | "Draft" | "Coming soon";
 
 type Article = {
