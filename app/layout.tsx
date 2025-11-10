@@ -1,6 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import "../styles/globals.css"; // or "../app/globals.css" if that's your setup
+import "./globals.css"; // or "../app/globals.css" if that's your setup
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
