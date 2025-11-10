@@ -4,23 +4,25 @@ import Link from "next/link";
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
-      <div className="mx-auto max-w-3xl px-4 py-16 space-y-6">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Contact & Opportunities
-        </h1>
+      <div className="mx-auto max-w-3xl px-4 py-16 space-y-10">
+        {/* Hero */}
+        <div className="space-y-4">
+          <h1 className="text-3xl font-semibold tracking-tight">
+            Contact & Opportunities
+          </h1>
+          <p className="text-sm text-slate-300 max-w-xl">
+            Thanks for visiting my portfolio. If you’re hiring or collaborating
+            on frontier-level AI products — particularly in{" "}
+            <span className="font-semibold text-emerald-300">
+              safety, governance, privacy, or edge-deployed LLMs
+            </span>{" "}
+            — I’d love to connect.
+          </p>
+        </div>
 
-        <p className="text-sm text-slate-300">
-          If you&apos;re building serious AI products — especially around safety,
-          compliance, or edge deployment — I&apos;m interested in{" "}
-          <span className="font-semibold text-emerald-300">
-            L7/L8 AI Product Manager roles, Principal-level IC roles, or
-            founder-style product leadership
-          </span>{" "}
-          where I can own a portfolio of high-stakes initiatives.
-        </p>
-
-        <div className="space-y-3 text-sm">
-          <div>
+        {/* Contact Methods */}
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="space-y-2">
             <div className="text-xs uppercase tracking-wide text-slate-400">
               Email
             </div>
@@ -32,7 +34,7 @@ export default function ContactPage() {
             </Link>
           </div>
 
-          <div>
+          <div className="space-y-2">
             <div className="text-xs uppercase tracking-wide text-slate-400">
               LinkedIn
             </div>
@@ -45,7 +47,7 @@ export default function ContactPage() {
             </Link>
           </div>
 
-          <div>
+          <div className="space-y-2">
             <div className="text-xs uppercase tracking-wide text-slate-400">
               GitHub
             </div>
@@ -57,14 +59,32 @@ export default function ContactPage() {
               github.com/apurvgaurav
             </Link>
           </div>
+
+          <div className="space-y-2">
+            <div className="text-xs uppercase tracking-wide text-slate-400">
+              Calendly
+            </div>
+            <Link
+              href="https://calendly.com/apurvgaurav/30min"
+              target="_blank"
+              className="text-emerald-300 hover:underline"
+            >
+              Schedule a conversation
+            </Link>
+          </div>
         </div>
 
-        <p className="pt-4 text-xs text-slate-500">
-          This page is intentionally simple and fully static — no forms, no
-          JavaScript handlers — to keep the portfolio reliable and easy to
-          deploy. A richer contact form can be added later as a dedicated client
-          component.
+        {/* Footer note */}
+        <p className="pt-6 text-xs text-slate-500">
+          This page is intentionally static — no forms or JavaScript handlers —
+          so it stays fast, private, and reliable across devices. For enterprise
+          discussions or confidential project inquiries, please email directly.
         </p>
+
+        <div className="pt-10 border-t border-slate-800 text-xs text-slate-600">
+          © {new Date().getFullYear()} Apurv Gaurav — Patent-Backed AI Product
+          Leader
+        </div>
       </div>
     </main>
   );
