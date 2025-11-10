@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Patents & Publications",
+  description:
+    "8+ USPTO non-provisional filings and research papers in progress on edge AI, deterministic AI safety, and code security.",
+};
+
+
 type PatentTheme =
   | "Edge AI & Privacy"
   | "AI Safety & Governance"
