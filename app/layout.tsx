@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Apurv Gaurav – Patent-Backed AI Product Leader",
@@ -27,24 +33,24 @@ export default function RootLayout({
   const year = new Date().getFullYear();
 
   return (
-    <html lang="en">
-      <body className="bg-slate-900 text-slate-100">
-        <div className="flex min-h-screen flex-col">
+    <html lang="en" className={inter.className}>
+      <body>
+        <div className="flex min-h-screen flex-col bg-[#020617] text-slate-100">
           {/* Global header */}
-          <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-900/80 backdrop-blur">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+          <header className="sticky top-0 z-20 border-b border-slate-800 bg-[#020617]/90 backdrop-blur">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
               <Link href="/" className="flex items-center gap-2">
-                <span className="text-sm font-semibold tracking-[0.2em] text-slate-400 uppercase">
+                <span className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
                   Apurv Gaurav
                 </span>
               </Link>
 
-              <nav className="flex items-center gap-4 text-sm text-slate-300">
+              <nav className="hidden items-center gap-4 text-xs text-slate-300 md:flex">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="rounded-full px-3 py-1 text-xs font-medium tracking-wide uppercase transition hover:bg-slate-800 hover:text-slate-100"
+                    className="rounded-full px-3 py-1 font-medium tracking-[0.16em] uppercase transition hover:bg-slate-800 hover:text-slate-100"
                   >
                     {item.name}
                   </Link>
@@ -54,12 +60,14 @@ export default function RootLayout({
           </header>
 
           {/* Page content */}
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            {children}
+          </main>
 
           {/* Global footer */}
-          <footer className="border-t border-slate-800 bg-slate-900/90">
-            <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-              <div>
+          <footer className="border-t border-slate-800 bg-[#020617]/95">
+            <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-[11px] text-slate-400 md:flex-row md:items-center md:justify-between md:px-6">
+              <div className="space-y-1">
                 <p className="font-medium text-slate-300">
                   Patent-backed AI product leader.
                 </p>
@@ -68,9 +76,9 @@ export default function RootLayout({
                   under real auditors.
                 </p>
               </div>
-              <div className="space-y-1 text-right">
+              <div className="space-y-1 text-left md:text-right">
                 <p>© {year} Apurv Gaurav</p>
-                <p className="text-[11px]">
+                <p>
                   Built with Next.js, Tailwind CSS, and Vercel.
                 </p>
               </div>
