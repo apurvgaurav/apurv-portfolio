@@ -39,3 +39,18 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+
+/* Base typography tweaks */
+body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+p {
+  margin: 0;
+}
+
+*::selection {
+  background-color: #0f172a; /* slate-900-ish */
+  color: #e5e7eb;           /* slate-200-ish */
+}
