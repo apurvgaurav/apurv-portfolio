@@ -1,12 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4 entrypoint */
+@import "tailwindcss";
 
 /* Optional: custom body reset */
 html,
 body {
   background-color: #f8fafc; /* Tailwind's slate-50 */
-  color: #0f172a; /* slate-900 */
+  color: #0f172a;            /* slate-900 */
   font-family: 'Inter', sans-serif;
 }
 
