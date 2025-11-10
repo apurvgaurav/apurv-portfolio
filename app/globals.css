@@ -1,6 +1,33 @@
-/* Tailwind layers – MUST be first */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global dark theme reset */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  a {
+    @apply text-sky-400 underline-offset-4 transition-colors;
+  }
+
+  a:hover {
+    @apply text-sky-300;
+  }
+}
+
+/* Optional: smooth scroll for nav links */
+html {
+  scroll-behavior: smooth;
+}
 
