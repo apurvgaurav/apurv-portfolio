@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Media & Speaking",
+  description:
+    "Planned and upcoming talks, interviews, and sessions on AI product, safety, governance, and edge deployment.",
+};
+
+
 export default function MediaPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-16 pt-12 space-y-12 md:px-6 md:pb-24 md:pt-16">
