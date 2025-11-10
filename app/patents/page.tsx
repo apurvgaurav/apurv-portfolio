@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function PatentsPage() {
   return (
     <div className="space-y-8">
+      {/* Intro */}
       <section className="space-y-4">
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
           Patent Portfolio (High-Level Overview)
@@ -30,25 +31,28 @@ export default function PatentsPage() {
         </div>
       </section>
 
-      {/* Thematic Cards */}
+      {/* Thematic Areas */}
       <section className="space-y-4">
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
           Thematic Areas
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
+          {/* Theme 1 */}
           <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
             <p className="text-sm font-semibold text-slate-900 mb-1">
               Edge AI &amp; Privacy
             </p>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Architectures for running powerful LLM capabilities locally,
-              without leaking sensitive data into external services.
+              Architectures for running powerful LLM capabilities locally, without
+              leaking sensitive data into external services.
             </p>
             <p className="mt-2 text-xs text-slate-600 leading-relaxed">
               Includes offline, self-forgetting memory patterns and on-device
-              alignment debugging and policy enforcement.
+              alignment debugging and policy enforcement for regulated environments.
             </p>
           </div>
+
+          {/* Theme 2 */}
           <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
             <p className="text-sm font-semibold text-slate-900 mb-1">
               AI Safety &amp; Governance
@@ -58,10 +62,13 @@ export default function PatentsPage() {
               marketing language into auditable systems.
             </p>
             <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-              Rule-based risk scoring for LLM responses and reproducible,
-              offline evaluation pipelines designed for regulated industries.
+              Rule-based risk scoring for LLM responses and reproducible, offline
+              evaluation pipelines designed for regulated industries and compliance
+              workflows.
             </p>
           </div>
+
+          {/* Theme 3 */}
           <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
             <p className="text-sm font-semibold text-slate-900 mb-1">
               Code Security &amp; Traceability
@@ -79,15 +86,30 @@ export default function PatentsPage() {
         </div>
       </section>
 
+      {/* Locked Feel / Summary */}
+      <section className="space-y-3 bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100">
+        <p className="text-sm font-semibold text-slate-900">
+          Why this page is intentionally high-level
+        </p>
+        <p className="text-xs text-slate-600 leading-relaxed max-w-3xl">
+          These inventions are active IP assets and part of a broader evidence set
+          for my long-term professional roadmap, including extraordinary ability
+          criteria. The public web is not the right place for full claim language
+          or diagrams. If you are evaluating a senior AI Product role, potential
+          collaboration, or legal review, I&apos;m happy to walk through the
+          portfolio under NDA.
+        </p>
+      </section>
+
       {/* CTA */}
       <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
         <p className="text-sm font-semibold text-slate-900">
-          Interested in the IP detail?
+          Interested in a deeper portfolio review?
         </p>
         <p className="text-xs text-slate-600 max-w-3xl">
           For serious hiring discussions, collaborations, or legal review, I can
           share a structured overview of the portfolio under NDA, including
-          application numbers, drawings, and claim summaries.
+          application numbers, claim summaries, and technical diagrams.
         </p>
         <div className="flex flex-wrap gap-3">
           <a
