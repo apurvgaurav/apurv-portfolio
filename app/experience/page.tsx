@@ -200,13 +200,18 @@ export default function ExperiencePage() {
     <p className="mt-1 text-sm text-slate-700">Focus: Applied AI Systems · Product Innovation · Governance Frameworks</p>
   </div>
 
-  <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-      <h3 className="text-base font-semibold text-slate-900">🎓 Master of Science (MS)</h3>
-      <p className="text-sm text-slate-600">University of Pennsylvania</p>
-    </div>
-    <p className="mt-1 text-sm text-slate-700">Focus: Systems Engineering · Analytics · Machine Learning Foundations</p>
+ <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <h3 className="text-base font-semibold text-slate-900">
+      🎓 Master of Science (MS), Urban Spatial Analytics
+    </h3>
+    <p className="text-sm text-slate-600">University of Pennsylvania</p>
   </div>
+  <p className="mt-1 text-sm text-slate-700">
+    Focus: Geospatial Data Science · Urban Systems Modeling · Predictive Analytics
+  </p>
+</div>
+
 
   <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
