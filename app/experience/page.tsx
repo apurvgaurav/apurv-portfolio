@@ -1,185 +1,195 @@
-export const metadata = {
-  title: "Experience",
-  description:
-    "Apurv Gaurav’s background across platform/release operations, independent AI product lab, and DEng studies – mapped to L7+ AI product work.",
-};
+// app/experience/page.tsx
 
+import Link from "next/link";
 
 export default function ExperiencePage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-16 pt-12 space-y-12 md:px-6 md:pb-24 md:pt-16">
-      {/* Page header */}
-      <header className="space-y-4">
-        <p className="text-[11px] font-semibold tracking-[0.35em] text-slate-400 uppercase">
+    <div className="space-y-10">
+      {/* Intro + Resume */}
+      <section className="space-y-4">
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
           Experience
-        </p>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
-          Systems, safety, and shipping under real constraints.
         </h1>
-        <p className="max-w-3xl text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-          My background blends large-scale platform operations, hands-on debugging, and
-          patent-backed AI product work. I&apos;m comfortable living where messy logs,
-          regulatory requirements, and product timelines collide — and turning that
-          chaos into shippable, audit-ready systems.
+        <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-3xl">
+          My career sits on two rails: enterprise-scale reliability and releases,
+          and an independent AI product lab focused on deterministic safety,
+          edge-deployed LLMs, and governance frameworks. Both inform how I
+          operate as an AI Product Leader.
         </p>
-      </header>
-
-      {/* Current focus + role snapshot */}
-      <section className="grid gap-6 md:grid-cols-[1.4fr,1fr]">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-3">
-          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-            Current focus
-          </h2>
-          <p className="text-sm font-medium text-slate-100">
-            Independent AI Product Lab · Patent-backed platforms
-          </p>
-          <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-            I run a personal &quot;AI product lab&quot; focused on edge-deployed LLMs,
-            deterministic safety engines, and code security. This includes{" "}
-            <span className="text-slate-100">
-              EdgeLLM V2, AI Risk Navigator, LLM Code Safety Auditor, PromptPilot,
-              AutoRedact AI, and TraceSafe AI
-            </span>{" "}
-            — each with a clear problem statement, architecture, and USPTO
-            non-provisional filing.
-          </p>
-          <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
-            <li>• 8+ non-provisional patent applications drafted and filed pro se.</li>
-            <li>• Prototypes and dashboards built with Python, local LLMs, and web UIs.</li>
-            <li>• Research papers targeting venues like Frontiers in AI and IEEE.</li>
-          </ul>
-        </div>
-
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-3">
-          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-            Academic track
-          </h2>
-          <p className="text-sm font-medium text-slate-100">
-            Doctor of Engineering (DEng) · Penn State (in progress)
-          </p>
-          <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-            I&apos;m pursuing a Doctor of Engineering with a focus on innovation, systems
-            thinking, and data-driven decision-making — aligning coursework, projects, and
-            research outputs with my AI safety and governance work.
-          </p>
-          <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
-            <li>• Translating academic projects into publishable papers and real prototypes.</li>
-            <li>• Prior Master&apos;s from the University of Pennsylvania (2010).</li>
-          </ul>
+        <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <p className="text-sm font-semibold text-slate-900">
+              Download Resume (PDF)
+            </p>
+            <p className="text-xs text-slate-600">
+              Concise, recruiter-ready summary of roles, education, and patent-backed
+              projects.
+            </p>
+          </div>
+          {/* TODO: update href to actual resume link when you have it */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow-sm hover:bg-blue-400 transition-colors"
+          >
+            Download PDF
+          </a>
         </div>
       </section>
 
-      {/* Role timeline */}
-      <section className="space-y-4 border-t border-slate-800 pt-10">
-        <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-          Selected roles
+      {/* Industry Experience */}
+      <section className="space-y-4">
+        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+          Industry Experience
         </h2>
-
         <div className="space-y-4">
-          {/* Comcast */}
-          <article className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2">
-            <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
+          <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
               <div>
-                <p className="text-sm font-semibold text-slate-50">
-                  Platform / Release Operations – Broadband &amp; Wi-Fi (Contract)
+                <p className="text-sm font-semibold text-slate-900">
+                  Platform &amp; Release Operations
                 </p>
-                <p className="text-xs text-slate-400">
-                  Comcast · Large-scale consumer gateways &amp; telemetry
-                </p>
+                <p className="text-xs text-slate-600">Comcast</p>
               </div>
-              <p className="text-[11px] text-slate-400">
-                Focus: reliability · telemetry · real-world constraints
-              </p>
+              <p className="text-xs text-slate-500">Recent Role</p>
             </div>
-            <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-              Worked across firmware, telemetry, and release workflows for broadband gateways,
-              helping debug issues in the field and coordinate fixes across multiple teams.
-              Spent a lot of time inside logs, traces, and real customer edge cases — the
-              exact mindset I now bring to AI systems and safety tooling.
-            </p>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
-              <li>• Triaged and analyzed complex issues across Wi-Fi, QoS, and device telemetry.</li>
-              <li>• Collaborated with engineers and PMs to coordinate fixes and validate releases.</li>
-              <li>• Built a habit of treating logs, metrics, and edge cases as core product signals.</li>
-            </ul>
-          </article>
-
-          {/* Independent AI product work */}
-          <article className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2">
-            <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
-              <div>
-                <p className="text-sm font-semibold text-slate-50">
-                  Independent AI Product Builder
-                </p>
-                <p className="text-xs text-slate-400">
-                  Self-directed · Patent-backed AI product portfolio
-                </p>
-              </div>
-              <p className="text-[11px] text-slate-400">
-                Focus: AI safety · governance · code security
-              </p>
-            </div>
-            <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-              Designed and executed a portfolio of AI products anchored in real compliance and
-              security constraints. Each initiative is treated like a full product line: problem
-              framing, architecture, patent strategy, prototype, and narrative for executives.
-            </p>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
+            <ul className="mt-3 space-y-2 text-sm text-slate-700 leading-relaxed">
               <li>
-                • EdgeLLM V2: Offline, privacy-preserving LLM assistant with self-forgetting
-                memory and alignment debugger.
+                • Led cross-team triage and release readiness for broadband firmware
+                platforms (RDK-B, Wi-Fi telemetry, customer gateways).
               </li>
               <li>
-                • AI Risk Navigator: Deterministic triage of hallucination, bias, and latency
-                risks with JSON risk vectors and replayable logs.
+                • Analyzed logs and field data to debug issues across millions of
+                deployed devices.
               </li>
               <li>
-                • LLM Code Safety Auditor: Offline rule engine for code scanning and deterministic,
-                explainable remediation.
+                • Collaborated with engineering, product, and operations to stabilize
+                releases and reduce regressions.
+              </li>
+              <li>
+                • Focused on reliability, observability, and controlled rollouts
+                instead of &quot;fire and forget&quot; launches.
               </li>
             </ul>
-          </article>
-
-          {/* Earlier foundation */}
-          <article className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2">
-            <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
-              <div>
-                <p className="text-sm font-semibold text-slate-50">
-                  Earlier engineering &amp; systems roles
-                </p>
-                <p className="text-xs text-slate-400">
-                  Mix of software, operations, and systems work
-                </p>
-              </div>
-              <p className="text-[11px] text-slate-400">
-                Focus: execution discipline · system thinking
-              </p>
-            </div>
-            <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-              Before going deep into AI product and safety, I built a foundation across software,
-              operations, and systems work — giving me empathy for the people who have to
-              actually run and maintain the things we design.
-            </p>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
-              <li>• Hands-on experience working close to production systems and constraints.</li>
-              <li>• Exposure to cross-functional work with engineers, operations, and product.</li>
-              <li>• Built a bias toward reliability, clarity, and strong documentation.</li>
-            </ul>
-          </article>
+          </div>
         </div>
       </section>
 
-      {/* How this maps to AI PM */}
-      <section className="space-y-4 border-t border-slate-800 pt-10">
-        <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-          How this maps to L7+ AI product work
+      {/* Independent AI Product Lab */}
+      <section className="space-y-4">
+        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+          Independent AI Product Lab
         </h2>
-        <p className="max-w-3xl text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-          I think like an L7 AI PM by default: I treat each product as a system that must survive
-          legal, security, infra, and real users — not just a demo. My edge ops background keeps
-          me grounded in reality, and my patent and research work pushes me to design for what&apos;s
-          coming next, not just what already exists.
+        <p className="text-sm text-slate-700 leading-relaxed max-w-3xl">
+          I run an independent AI lab focused on systems that can be audited,
+          regulated, and trusted. The work centers on deterministic AI safety,
+          edge deployment, and code-security frameworks.
         </p>
+        <p className="text-xs text-slate-600">
+          Filed eight non-provisional AI patent applications with the USPTO as
+          independent inventor (pro se), covering deterministic AI safety,
+          privacy-preserving architectures, and code-security frameworks. Authoring
+          research papers aligned with these systems, currently under review at
+          Frontiers in AI and IEEE venues.
+        </p>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900 mb-1">
+              EdgeLLM V2 – Privacy + Alignment
+            </p>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Offline, self-forgetting LLM architecture with on-device alignment
+              debugger for regulated environments.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900 mb-1">
+              AI Risk Navigator
+            </p>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Deterministic rule engine that scores and triages LLM risks
+              (hallucination, bias, safety violations, latency anomalies) in
+              real time.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900 mb-1">
+              LLM Code Safety Auditor
+            </p>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Offline, rule-based source code evaluation and remediation engine
+              for LLM-generated or human-written code.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900 mb-1">
+              PromptPilot, AutoRedact AI, TraceSafe AI, Self-Healing Prompt Engine
+            </p>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Governance-focused systems for prompt policies, data redaction,
+              traceability, and self-healing prompt chains.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="space-y-4">
+        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+          Education
+        </h2>
+        <div className="space-y-3">
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900">
+              Doctor of Engineering (DEng), Engineering
+            </p>
+            <p className="text-xs text-slate-600">Penn State World Campus · In Progress</p>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900">
+              Master of Science
+            </p>
+            <p className="text-xs text-slate-600">University of Pennsylvania · 2010</p>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900">
+              Bachelor of Technology
+            </p>
+            <p className="text-xs text-slate-600">
+              {/* Replace with your institution and discipline */}
+              [Your Institution Name] · [Discipline]
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Strip */}
+      <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-slate-900">
+            Ready for the deep technical side?
+          </p>
+          <p className="text-xs text-slate-600">
+            Explore the high-level themes of my patent portfolio or reach out
+            directly.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/patents"
+            className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow-sm hover:bg-blue-400 transition-colors"
+          >
+            View Patents
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md border border-slate-300 px-4 py-2 text-xs sm:text-sm font-medium text-slate-800 hover:bg-slate-100 transition-colors"
+          >
+            Contact
+          </Link>
+        </div>
       </section>
     </div>
   );
