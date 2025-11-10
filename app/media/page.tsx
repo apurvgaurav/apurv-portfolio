@@ -11,19 +11,19 @@ export default function MediaPage() {
           Talks &amp; Appearances
         </h1>
         <p className="text-sm sm:text-base text-slate-200 max-w-3xl leading-relaxed">
-          I design AI systems that can survive scrutiny from security, legal, and
-          regulators — not just demos. These are the topics I speak about in
-          conferences, internal tech talks, and guest lectures.
+          I design AI systems that can survive scrutiny from security, legal,
+          and regulators — not just demos. These are the topics I speak about
+          in conferences, internal tech talks, and guest lectures.
         </p>
       </section>
 
       {/* Intro */}
       <section className="space-y-3">
         <p className="text-sm text-slate-700 leading-relaxed max-w-3xl">
-          I&apos;m available for talks, guest lectures, and private briefings focused
-          on Edge AI, deterministic safety, and patent-backed product strategy.
-          Below are core topics I&apos;m building into full talks and workshops.
-          Recording slots are available starting from upcoming cycles.
+          I&apos;m available for talks, guest lectures, and private briefings
+          focused on Edge AI, deterministic safety, and patent-backed product
+          strategy. Below are core topics I&apos;m building into full talks and
+          workshops. Recording slots are available from upcoming cycles.
         </p>
       </section>
 
@@ -38,10 +38,10 @@ export default function MediaPage() {
               Deterministic AI Safety in Production Systems
             </p>
             <p className="text-xs text-slate-600 leading-relaxed">
-              How to move beyond black-box trust and design rule-based, auditable
-              safety layers around LLMs. Focused on systems that can be inspected
-              and defended when regulators or security teams start asking hard
-              questions.
+              How to move beyond black-box trust and design rule-based,
+              auditable safety layers around LLMs. Focused on systems that can
+              be inspected and defended when regulators or security teams start
+              asking hard questions.
             </p>
             <p className="mt-2 text-[11px] text-slate-500">
               Format: 30–45 minute talk + Q&amp;A · Status: Available
@@ -53,9 +53,9 @@ export default function MediaPage() {
               Edge-Deployed LLMs in Regulated Environments
             </p>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Architectural patterns for running LLMs on-device while respecting
-              privacy laws and internal policies. Tailored for healthcare, finance,
-              telecom, and other regulated domains.
+              Architectural patterns for running LLMs on-device while
+              respecting privacy laws and internal policies. Tailored for
+              healthcare, finance, telecom, and other regulated domains.
             </p>
             <p className="mt-2 text-[11px] text-slate-500">
               Format: 30–60 minute session · Status: Available for 2026+ slots
