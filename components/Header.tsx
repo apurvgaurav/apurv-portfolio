@@ -25,7 +25,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="border-b border-slate-200 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/80 backdrop-blur">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-baseline gap-2">
           <span className="text-lg font-semibold tracking-tight">
