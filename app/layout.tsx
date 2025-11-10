@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import "./globals.css";
 
@@ -21,7 +22,7 @@ const navItems = [
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   const year = new Date().getFullYear();
 
@@ -53,9 +54,7 @@ export default function RootLayout({
           </header>
 
           {/* Page content */}
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
 
           {/* Global footer */}
           <footer className="border-t border-slate-800 bg-slate-950/90">
