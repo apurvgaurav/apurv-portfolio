@@ -2,55 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Simple global dark theme using plain CSS (no @apply) */
-
-:root {
-  color-scheme: dark;
-}
-
+/* Optional: custom body reset */
 html,
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background-color: #020617; /* near slate-950 */
-  color: #f9fafb;            /* near slate-50 */
+  background-color: #f8fafc; /* Tailwind's slate-50 */
+  color: #0f172a; /* slate-900 */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Smooth text rendering */
+* {
   -webkit-font-smoothing: antialiased;
-}
-
-/* Make sure body stretches to full viewport height */
-body {
-  min-height: 100vh;
-}
-
-/* Links */
-a {
-  color: #60a5fa; /* blue-400-ish */
-  text-decoration: none;
-  text-underline-offset: 0.2em;
-  transition: color 150ms ease;
-}
-
-a:hover {
-  color: #93c5fd; /* blue-300-ish */
-}
-
-/* Smooth scrolling for in-page anchors */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Base typography tweaks */
-body {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-p {
-  margin: 0;
-}
-
-*::selection {
-  background-color: #0f172a; /* slate-900-ish */
-  color: #e5e7eb;           /* slate-200-ish */
+  -moz-osx-font-smoothing: grayscale;
 }
