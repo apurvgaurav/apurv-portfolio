@@ -1,143 +1,289 @@
-// app/patents/page.tsx
-import Link from "next/link";
+type PatentTheme = "Edge AI & Privacy" | "AI Safety & Governance" | "Code Security & Traceability";
 
-const patents = [
+type PatentItem = {
+  id: string;
+  title: string;
+  shortName: string;
+  theme: PatentTheme;
+  status: string;
+  role: string;
+  year: string;
+  focus: string;
+  summary: string;
+  notes?: string;
+};
+
+const patents: PatentItem[] = [
   {
+    id: "llm-code-safety-auditor",
     title:
       "LLM Code Safety Auditor: Offline, Rule-Based Source Code Evaluation and Remediation Engine",
-    appNumber: "19/283,236",
-    status: "✅ Docketed – Ready for Examination",
+    shortName: "LLM Code Safety Auditor",
+    theme: "Code Security & Traceability",
+    status: "USPTO non-provisional · docketed – ready for examination",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Deterministic code scanning, OWASP-style rule mapping, offline operation",
     summary:
-      "Offline deterministic engine for static code analysis using OWASP-style rules and reproducible remediation logic. Designed for air-gapped environments.",
+      "Defines a non-generative, rule-based engine that scans source code offline, maps findings to structured rules, and applies ordered, explainable remediation steps suitable for security programs.",
+    notes: "Core anchor for code safety narrative in interviews and EB-1 track.",
   },
   {
+    id: "edgellm-v2",
     title:
       "Edge-Deployed LLM V2: Privacy-Preserving Offline Architecture with Self-Forgetting Memory and On-Device Alignment Debugger",
-    appNumber: "19/268,142",
-    status: "⚠️ Formatting Issue – To Refile",
+    shortName: "EdgeLLM V2: Privacy + Alignment",
+    theme: "Edge AI & Privacy",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Offline LLMs, controlled memory vault, alignment debugger, edge devices",
     summary:
-      "Edge-deployed large language model with privacy vault and on-device rule-based alignment debugger, enabling full offline inference.",
+      "Describes an edge-deployed LLM assistant that runs fully offline with a controlled memory vault, self-forgetting behavior, and a deterministic alignment debugger designed for regulated environments.",
+    notes: "Flagship edge AI privacy patent; pairs with working prototype and deep-dive docs.",
   },
   {
+    id: "promptpilot",
     title:
-      "Prompt Pilot: Adaptive Prompt Governance and Evaluation Framework",
-    appNumber: "19/269,169",
-    status: "⚠️ Claims Rejected – Revision in Progress",
+      "PromptPilot: Governance and Evaluation Framework for Production-Grade Prompt Workflows",
+    shortName: "PromptPilot",
+    theme: "AI Safety & Governance",
+    status: "USPTO non-provisional · filed (claims under active refinement)",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Prompt versioning, evaluation, rollout control, governance dashboards",
     summary:
-      "Prompt orchestration and governance layer for multi-model evaluation and reproducibility across enterprise LLM workflows.",
+      "Covers a governance cockpit for prompts: tracking variants, metrics, and regression tests, with structured rollout and rollback paths for production LLM applications.",
+    notes: "Becomes stronger when tied to real dashboard and evaluation demos.",
   },
   {
+    id: "ai-risk-navigator",
     title:
-      "AI Risk Navigator: Deterministic Framework for Real-Time LLM Risk Detection and Triage",
-    appNumber: "19/275,864",
-    status: "⚠️ Formatting Issue",
+      "AI Risk Navigator: Deterministic Framework for Real-Time Model Risk Detection and Triage",
+    shortName: "AI Risk Navigator",
+    theme: "AI Safety & Governance",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Hallucination and bias detection, latency anomalies, risk vectors, audit logs",
     summary:
-      "Model-agnostic, rule-based system for hallucination, bias, and latency anomaly detection in large language model outputs.",
+      "Introduces a deterministic triage engine that converts LLM outputs into multi-axis risk vectors (hallucination, bias, latency, etc.) with reproducible logs and JSON policies for governance teams.",
   },
   {
+    id: "autoredact-ai",
     title:
-      "Trace Safe AI: Deterministic Traceability and Safety Enforcement System for AI Outputs",
-    appNumber: "19/281,714",
-    status: "⚠️ Formatting Issue (>30 claims)",
+      "AutoRedact AI: Deterministic Redaction Engine for Sensitive Data in AI Workflows",
+    shortName: "AutoRedact AI",
+    theme: "Edge AI & Privacy",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "PII and secrets redaction, policy-based filters, pre/post LLM pipelines",
     summary:
-      "End-to-end AI traceability and risk logging framework supporting deterministic replay and regulatory compliance.",
+      "Proposes a redaction layer that runs before and after LLM calls, using deterministic rules to strip PII, secrets, and regulated content while generating explainable audit records.",
   },
   {
+    id: "tracesafe-ai",
     title:
-      "Auto Redact AI: Offline Rule-Based Data Redaction and Compliance Engine",
-    appNumber: "19/281,903",
-    status: "⚠️ Formatting Issue",
+      "TraceSafe AI: Deterministic Traceability and Replay Framework for AI Decisions",
+    shortName: "TraceSafe AI",
+    theme: "Code Security & Traceability",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Trace IDs, replayable decision context, audit trails",
     summary:
-      "Local rule-based system for redacting PII and sensitive data across text and code, with deterministic audit trails.",
+      "Defines a traceability framework where each AI decision is tagged with deterministic trace IDs, policies, and context that can be replayed for auditors, incident reviews, and regulators.",
   },
   {
+    id: "autojudge",
     title:
-      "Self-Healing Prompt Engine: Rule-Guided Autonomous Prompt Correction Framework",
-    appNumber: "19/281,647",
-    status: "⚠️ Formatting Issue",
+      "AutoJudge: Deterministic Rule Engine for Model-Agnostic Decision Evaluation",
+    shortName: "AutoJudge",
+    theme: "AI Safety & Governance",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Non-generative rule engine, scoring, offline operation, model-agnostic design",
     summary:
-      "Non-generative engine that applies deterministic rule sequences to repair and self-correct prompt logic in LLM workflows.",
+      "Covers a deterministic, rule-driven evaluator that scores model outputs and decisions against explicit policies without using ML in the decision layer itself.",
   },
   {
+    id: "self-healing-prompt-engine",
     title:
-      "Auto Judge: Deterministic Rule-Based AI Decision Evaluation and Audit System",
-    appNumber: "19/279,355",
-    status: "⚠️ Formatting Issue",
+      "Self-Healing Prompt Engine: Deterministic Recovery and Guardrail Framework for Prompt Failures",
+    shortName: "Self-Healing Prompt Engine",
+    theme: "AI Safety & Governance",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor / Product Lead",
     year: "2025",
+    focus: "Prompt failure detection, fallback sequences, recovery flows",
     summary:
-      "Offline evaluation layer for deterministic scoring and audit trail generation across AI-generated decisions and responses.",
+      "Describes a deterministic engine that detects prompt failures and routes through guardrails, fallbacks, and remediation steps to keep LLM-powered workflows reliable.",
+  },
+];
+
+const themes: { key: PatentTheme; label: string; description: string }[] = [
+  {
+    key: "Edge AI & Privacy",
+    label: "Edge AI & Privacy",
+    description: "Offline, privacy-preserving architectures for LLMs and sensitive data.",
+  },
+  {
+    key: "AI Safety & Governance",
+    label: "AI Safety & Governance",
+    description: "Deterministic engines for risk, safety, and policy enforcement.",
+  },
+  {
+    key: "Code Security & Traceability",
+    label: "Code Security & Traceability",
+    description: "Secure code workflows and replayable AI decisions for auditors.",
   },
 ];
 
 export default function PatentsPage() {
   return (
-    <main className="min-h-screen bg-black text-zinc-50">
-      <section className="mx-auto w-full max-w-5xl px-4 pb-20 pt-24 space-y-10">
-        <header className="space-y-3">
-          <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">
-            Patents
-          </p>
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Patent Portfolio
-          </h1>
-          <p className="max-w-3xl text-sm text-zinc-300 sm:text-base">
-            Each patent reflects a distinct AI system — all focused on{" "}
-            <span className="text-zinc-100">edge deployment, determinism, and safety.</span>{" "}
-            These filings support my EB-1 trajectory by demonstrating original
-            technical contributions in privacy-preserving and auditable AI.
-          </p>
-        </header>
+    <div className="mx-auto max-w-6xl px-4 pb-16 pt-12 space-y-12 md:px-6 md:pb-24 md:pt-16">
+      {/* Page header */}
+      <header className="space-y-4">
+        <p className="text-[11px] font-semibold tracking-[0.35em] text-slate-400 uppercase">
+          Patents
+        </p>
+        <h1 className="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
+          Patent-backed theses on AI safety, privacy, and code security.
+        </h1>
+        <p className="max-w-3xl text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
+          I&apos;ve independently drafted and filed a portfolio of USPTO non-provisional
+          applications focused on edge AI, deterministic safety engines, and secure code
+          workflows. These are not just ideas — they are anchored in working architectures,
+          prototypes, and research directions that can be taken into real products.
+        </p>
+        <p className="max-w-3xl text-[11px] leading-relaxed text-slate-400">
+          Public details here are high-level by design. Full application numbers, claim
+          sets, and drawings are available on request under appropriate NDA if needed.
+        </p>
+      </header>
 
-        <div className="grid gap-6">
-          {patents.map((p) => (
+      {/* Portfolio summary */}
+      <section className="grid gap-6 md:grid-cols-3">
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2">
+          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            Portfolio snapshot
+          </h2>
+          <p className="text-sm text-slate-100">
+            8+ USPTO non-provisional applications
+          </p>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
+            <li>• Edge LLMs, privacy, and alignment debugging.</li>
+            <li>• Deterministic safety, moderation, and governance engines.</li>
+            <li>• Code security, redaction, and traceability frameworks.</li>
+          </ul>
+        </div>
+
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2">
+          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            Filing approach
+          </h2>
+          <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
+            All applications were drafted and filed pro se, with a focus on clear enablement,
+            non-generative decision layers, and architectures that can be implemented with
+            today&apos;s infrastructure.
+          </p>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
+            <li>• Emphasis on determinism and auditability.</li>
+            <li>• Strong contrast with existing ML-heavy prior art.</li>
+          </ul>
+        </div>
+
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2">
+          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            For hiring managers
+          </h2>
+          <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
+            Treat this portfolio as proof that I can turn ambiguous frontier areas into
+            concrete architectures, specs, and IP — and then tie them back to working
+            prototypes and narratives you can take to legal, security, and leadership.
+          </p>
+        </div>
+      </section>
+
+      {/* Themes overview */}
+      <section className="space-y-4 border-t border-slate-800 pt-10">
+        <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
+          Thematic pillars
+        </h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          {themes.map((theme) => (
             <div
-              key={p.appNumber}
-              className="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5 shadow-[0_0_40px_rgba(0,0,0,0.45)]"
+              key={theme.key}
+              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2"
             >
-              <div className="flex flex-col gap-2">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                  <h2 className="text-lg font-medium text-zinc-50">
-                    {p.title}
-                  </h2>
-                  <span className="text-xs text-zinc-400">
-                    Filed {p.year}
-                  </span>
-                </div>
-                <p className="text-xs text-zinc-400">
-                  Application No: {p.appNumber}
-                </p>
-                <p className="text-xs text-zinc-400">{p.status}</p>
-                <p className="mt-2 text-sm text-zinc-300">{p.summary}</p>
-              </div>
+              <p className="text-xs font-semibold text-slate-100">
+                {theme.label}
+              </p>
+              <p className="text-xs leading-relaxed text-slate-300">
+                {theme.description}
+              </p>
             </div>
           ))}
         </div>
+      </section>
 
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-xs text-zinc-400 sm:text-sm">
-          <p>
-            USPTO filings prepared and submitted <strong>pro se</strong> without
-            legal counsel. Track-One priority filings and clean docket entries
-            demonstrate independent research, enablement, and inventive
-            contribution across deterministic AI systems.
+      {/* Patent list */}
+      <section className="space-y-4 border-t border-slate-800 pt-10">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            Individual filings
+          </h2>
+          <p className="text-[11px] text-slate-400">
+            High-level view · full details available on request
           </p>
         </div>
 
-        <div className="text-center pt-4">
-          <Link
-            href="/contact"
-            className="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-zinc-400"
-          >
-            Request detailed patent summaries →
-          </Link>
+        <div className="space-y-4">
+          {patents.map((patent) => (
+            <article
+              key={patent.id}
+              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-3"
+            >
+              <div className="flex flex-col justify-between gap-2 md:flex-row md:items-start">
+                <div className="space-y-1.5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                    {patent.theme}
+                  </p>
+                  <h3 className="text-sm font-semibold text-slate-50 md:text-[0.98rem]">
+                    {patent.shortName}
+                  </h3>
+                  <p className="text-[11px] text-slate-400">
+                    {patent.title}
+                  </p>
+                </div>
+                <div className="space-y-1 text-right text-[11px] text-slate-400 md:min-w-[180px]">
+                  <p className="font-medium text-slate-200">{patent.status}</p>
+                  <p>{patent.year}</p>
+                  <p>{patent.role}</p>
+                </div>
+              </div>
+
+              <p className="text-xs leading-relaxed text-slate-300">
+                {patent.summary}
+              </p>
+
+              <p className="text-[11px] text-slate-400">
+                <span className="font-semibold text-slate-300">Focus: </span>
+                {patent.focus}
+              </p>
+
+              {patent.notes && (
+                <p className="text-[11px] text-slate-400">
+                  <span className="font-semibold text-slate-300">Notes: </span>
+                  {patent.notes}
+                </p>
+              )}
+            </article>
+          ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }
