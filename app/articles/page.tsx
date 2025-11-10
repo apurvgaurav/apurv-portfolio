@@ -1,5 +1,27 @@
 // app/articles/page.tsx
 
+type ArticleCardProps = {
+  title: string;
+  status: string;
+  description: string;
+};
+
+function ArticleCard({ title, status, description }: ArticleCardProps) {
+  return (
+    <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+        <p className="text-sm font-semibold text-slate-900">{title}</p>
+        <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[11px] font-medium text-slate-700">
+          {status}
+        </span>
+      </div>
+      <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+        {description}
+      </p>
+    </div>
+  );
+}
+
 export default function ArticlesPage() {
   return (
     <div className="space-y-8">
@@ -66,28 +88,6 @@ export default function ArticlesPage() {
           Follow on LinkedIn
         </a>
       </section>
-    </div>
-  );
-}
-
-type ArticleCardProps = {
-  title: string;
-  status: string;
-  description: string;
-};
-
-function ArticleCard({ title, status, description }: ArticleCardProps) {
-  return (
-    <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
-      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
-        <p className="text-sm font-semibold text-slate-900">{title}</p>
-        <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[11px] font-medium text-slate-700">
-          {status}
-        </span>
-      </div>
-      <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-        {description}
-      </p>
     </div>
   );
 }
