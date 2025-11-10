@@ -48,8 +48,9 @@ export default function ContactPage() {
             For Roles (Hiring Managers / Recruiters)
           </p>
           <p className="text-xs text-slate-600 leading-relaxed">
-            If you&apos;re reaching out about a role, including senior AI Product
-            roles (L7/L8 scope or equivalent), please include:
+          If you&apos;re reaching out about a senior AI Product role or strategic
+leadership position, please include:
+
           </p>
           <ul className="text-xs text-slate-700 leading-relaxed list-disc list-inside space-y-1">
             <li>Company, team, and level.</li>
