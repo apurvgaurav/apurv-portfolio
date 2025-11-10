@@ -1,4 +1,7 @@
-type PatentTheme = "Edge AI & Privacy" | "AI Safety & Governance" | "Code Security & Traceability";
+type PatentTheme =
+  | "Edge AI & Privacy"
+  | "AI Safety & Governance"
+  | "Code Security & Traceability";
 
 type PatentItem = {
   id: string;
@@ -13,6 +16,16 @@ type PatentItem = {
   notes?: string;
 };
 
+type Publication = {
+  id: string;
+  title: string;
+  venue: string;
+  status: string;
+  year: string;
+  focus: string;
+  note?: string;
+};
+
 const patents: PatentItem[] = [
   {
     id: "llm-code-safety-auditor",
@@ -21,7 +34,7 @@ const patents: PatentItem[] = [
     shortName: "LLM Code Safety Auditor",
     theme: "Code Security & Traceability",
     status: "USPTO non-provisional · docketed – ready for examination",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Deterministic code scanning, OWASP-style rule mapping, offline operation",
     summary:
@@ -35,12 +48,11 @@ const patents: PatentItem[] = [
     shortName: "EdgeLLM V2: Privacy + Alignment",
     theme: "Edge AI & Privacy",
     status: "USPTO non-provisional · filed",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Offline LLMs, controlled memory vault, alignment debugger, edge devices",
     summary:
       "Describes an edge-deployed LLM assistant that runs fully offline with a controlled memory vault, self-forgetting behavior, and a deterministic alignment debugger designed for regulated environments.",
-    notes: "Flagship edge AI privacy patent; pairs with working prototype and deep-dive docs.",
   },
   {
     id: "promptpilot",
@@ -48,13 +60,12 @@ const patents: PatentItem[] = [
       "PromptPilot: Governance and Evaluation Framework for Production-Grade Prompt Workflows",
     shortName: "PromptPilot",
     theme: "AI Safety & Governance",
-    status: "USPTO non-provisional · filed (claims under active refinement)",
-    role: "Inventor / Product Lead",
+    status: "USPTO non-provisional · filed",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Prompt versioning, evaluation, rollout control, governance dashboards",
     summary:
       "Covers a governance cockpit for prompts: tracking variants, metrics, and regression tests, with structured rollout and rollback paths for production LLM applications.",
-    notes: "Becomes stronger when tied to real dashboard and evaluation demos.",
   },
   {
     id: "ai-risk-navigator",
@@ -63,7 +74,7 @@ const patents: PatentItem[] = [
     shortName: "AI Risk Navigator",
     theme: "AI Safety & Governance",
     status: "USPTO non-provisional · filed",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Hallucination and bias detection, latency anomalies, risk vectors, audit logs",
     summary:
@@ -76,7 +87,7 @@ const patents: PatentItem[] = [
     shortName: "AutoRedact AI",
     theme: "Edge AI & Privacy",
     status: "USPTO non-provisional · filed",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "PII and secrets redaction, policy-based filters, pre/post LLM pipelines",
     summary:
@@ -89,7 +100,7 @@ const patents: PatentItem[] = [
     shortName: "TraceSafe AI",
     theme: "Code Security & Traceability",
     status: "USPTO non-provisional · filed",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Trace IDs, replayable decision context, audit trails",
     summary:
@@ -102,7 +113,7 @@ const patents: PatentItem[] = [
     shortName: "AutoJudge",
     theme: "AI Safety & Governance",
     status: "USPTO non-provisional · filed",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Non-generative rule engine, scoring, offline operation, model-agnostic design",
     summary:
@@ -115,11 +126,45 @@ const patents: PatentItem[] = [
     shortName: "Self-Healing Prompt Engine",
     theme: "AI Safety & Governance",
     status: "USPTO non-provisional · filed",
-    role: "Inventor / Product Lead",
+    role: "Inventor (pro se)",
     year: "2025",
     focus: "Prompt failure detection, fallback sequences, recovery flows",
     summary:
       "Describes a deterministic engine that detects prompt failures and routes through guardrails, fallbacks, and remediation steps to keep LLM-powered workflows reliable.",
+  },
+];
+
+const publications: Publication[] = [
+  {
+    id: "paper-1",
+    title:
+      "Deterministic AI Risk Vectors for Large Language Models in Regulated Environments",
+    venue: "Frontiers in AI (target venue)",
+    status: "In preparation",
+    year: "2025",
+    focus:
+      "Formalizing the AI Risk Navigator approach as reproducible, rule-based risk vectors.",
+    note: "Built on top of the AI Risk Navigator patent and prototype work.",
+  },
+  {
+    id: "paper-2",
+    title:
+      "Edge-Deployed LLMs with Self-Forgetting Memory for Privacy-Critical Applications",
+    venue: "Applied AI / Systems venues (target)",
+    status: "In preparation",
+    year: "2025",
+    focus:
+      "Architecture and evaluation plan for EdgeLLM V2 in privacy-sensitive environments.",
+  },
+  {
+    id: "paper-3",
+    title:
+      "Non-Generative Code Safety Engines for LLM-Assisted Development",
+    venue: "Security / DevSecOps venues (target)",
+    status: "Concept & outline",
+    year: "2025",
+    focus:
+      "Positioning the LLM Code Safety Auditor as a deterministic alternative to generative code scanners.",
   },
 ];
 
@@ -147,20 +192,20 @@ export default function PatentsPage() {
       {/* Page header */}
       <header className="space-y-4">
         <p className="text-[11px] font-semibold tracking-[0.35em] text-slate-400 uppercase">
-          Patents
+          Patents &amp; Publications
         </p>
         <h1 className="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
-          Patent-backed theses on AI safety, privacy, and code security.
+          Patent-backed theses and research on AI safety, privacy, and code security.
         </h1>
         <p className="max-w-3xl text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
           I&apos;ve independently drafted and filed a portfolio of USPTO non-provisional
           applications focused on edge AI, deterministic safety engines, and secure code
-          workflows. These are not just ideas — they are anchored in working architectures,
-          prototypes, and research directions that can be taken into real products.
+          workflows, alongside research papers under development. Together they form the
+          backbone of my EB-1A and senior AI product narrative.
         </p>
         <p className="max-w-3xl text-[11px] leading-relaxed text-slate-400">
           Public details here are high-level by design. Full application numbers, claim
-          sets, and drawings are available on request under appropriate NDA if needed.
+          sets, and drafts can be shared on request under appropriate NDA.
         </p>
       </header>
 
@@ -201,8 +246,8 @@ export default function PatentsPage() {
           </h2>
           <p className="text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
             Treat this portfolio as proof that I can turn ambiguous frontier areas into
-            concrete architectures, specs, and IP — and then tie them back to working
-            prototypes and narratives you can take to legal, security, and leadership.
+            concrete architectures, specs, and IP — then tie them back to prototypes and
+            narratives you can take to legal, security, and leadership.
           </p>
         </div>
       </section>
@@ -233,10 +278,10 @@ export default function PatentsPage() {
       <section className="space-y-4 border-t border-slate-800 pt-10">
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-            Individual filings
+            Individual patent filings
           </h2>
           <p className="text-[11px] text-slate-400">
-            High-level view · full details available on request
+            High-level view · detailed refs on request
           </p>
         </div>
 
@@ -278,6 +323,49 @@ export default function PatentsPage() {
                 <p className="text-[11px] text-slate-400">
                   <span className="font-semibold text-slate-300">Notes: </span>
                   {patent.notes}
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Publications */}
+      <section className="space-y-4 border-t border-slate-800 pt-10">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            Research &amp; publications
+          </h2>
+          <p className="text-[11px] text-slate-400">
+            Pipeline aligned to the same themes as the patent work
+          </p>
+        </div>
+
+        <div className="space-y-3">
+          {publications.map((pub) => (
+            <article
+              key={pub.id}
+              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 space-y-2"
+            >
+              <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
+                <div>
+                  <h3 className="text-sm font-semibold text-slate-50 md:text-[0.98rem]">
+                    {pub.title}
+                  </h3>
+                  <p className="text-[11px] text-slate-400">
+                    {pub.venue} · {pub.year}
+                  </p>
+                </div>
+                <p className="text-[11px] text-slate-300 md:text-right">
+                  {pub.status}
+                </p>
+              </div>
+              <p className="text-xs leading-relaxed text-slate-300">
+                {pub.focus}
+              </p>
+              {pub.note && (
+                <p className="text-[11px] text-slate-400">
+                  {pub.note}
                 </p>
               )}
             </article>
