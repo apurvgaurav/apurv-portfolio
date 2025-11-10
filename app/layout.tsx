@@ -1,8 +1,10 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import "./globals.css"; // or "../app/globals.css" if that's your setup
+import "./globals.css"; // <- this is the correct line
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
 
 export const metadata: Metadata = {
   title: "Apurv Gaurav | Patent-Backed AI Product Leader",
