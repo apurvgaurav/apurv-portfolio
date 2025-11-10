@@ -3,90 +3,40 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-black text-zinc-50">
-      {/* Top Nav */}
-      <header className="sticky top-0 z-20 border-b border-zinc-900 bg-black/80 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-zinc-100 text-xs font-semibold text-black">
-              AG
-            </span>
-            <span className="text-sm font-medium text-zinc-100">
-              Apurv Gaurav
-            </span>
-          </Link>
-          <nav className="flex items-center gap-4 text-xs text-zinc-400 sm:text-sm">
-            <Link
-              href="/#hero"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/projects"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/experience"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Experience
-            </Link>
-            <Link
-              href="/patents"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Patents
-            </Link>
-            <Link
-              href="/media"
-              className="hidden hover:text-zinc-100 transition-colors sm:inline"
-            >
-              Media
-            </Link>
-            <Link
-              href="/articles"
-              className="hidden hover:text-zinc-100 transition-colors sm:inline"
-            >
-              Articles
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-full border border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-100 hover:border-zinc-400"
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
-
+    <main className="relative min-h-screen bg-black text-zinc-50">
       {/* Hero */}
       <section
         id="hero"
-        className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 pb-16 pt-20 sm:flex-row sm:items-center"
+        className="relative mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 pb-16 pt-20 sm:flex-row sm:items-center"
       >
-        <div className="flex-1 space-y-5">
+        {/* Soft glow background */}
+        <div className="absolute inset-0">
+          <div className="hero-glow" />
+        </div>
+
+        <div className="relative z-10 flex-1 space-y-5">
           <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
             Patent-backed AI Product Leader
           </p>
+
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl lg:text-5xl">
-            I build <span className="text-zinc-200">edge AI</span>,{" "}
-            <span className="text-zinc-200">safety</span>, and{" "}
-            <span className="text-zinc-200">governance</span> products that
-            survive real auditors.
+            APURV GAURAV
           </h1>
+
+          <h2 className="text-lg font-medium text-zinc-100 sm:text-xl">
+            PATENT-BACKED AI PRODUCT LEADER
+          </h2>
+
           <p className="max-w-xl text-sm text-zinc-300 sm:text-base">
-            I’m <span className="text-zinc-100">Apurv Gaurav</span> – an AI
-            Product Manager operating at{" "}
-            <span className="text-zinc-100">L7+ scope</span>, with{" "}
-            <span className="text-zinc-100">
-              8+ USPTO non-provisional filings
-            </span>{" "}
-            across edge-deployed LLMs, deterministic safety engines, and code
-            security. I focus on products that can actually ship inside
-            regulated, privacy-critical environments.
+            I build <span className="text-zinc-100">edge AI</span>,{" "}
+            <span className="text-zinc-100">safety</span>, and{" "}
+            <span className="text-zinc-100">governance</span> products that
+            survive real auditors.
+          </p>
+
+          <p className="max-w-xl text-sm text-zinc-300 sm:text-base">
+            DEng (in progress, Penn State) · Master’s, University of
+            Pennsylvania
           </p>
 
           <div className="flex flex-wrap items-center gap-3 text-xs text-zinc-400">
@@ -104,58 +54,16 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/projects"
-              className="rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-black hover:bg-zinc-200"
+              className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-medium text-black hover:bg-[var(--accent-hover)]"
             >
               View flagship projects
             </Link>
             <Link
               href="/contact"
-              className="rounded-full border border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-zinc-500"
+              className="rounded-full border border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-[var(--accent)]"
             >
               For hiring managers
             </Link>
-          </div>
-        </div>
-
-        <div className="mt-6 flex-1 space-y-3 sm:mt-0">
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-4 text-xs text-zinc-300">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-zinc-500">
-              Snapshot
-            </p>
-            <ul className="mt-2 space-y-1.5">
-              <li className="flex justify-between gap-4">
-                <span>USPTO status</span>
-                <span className="text-right text-zinc-100">
-                  8 non-provisional filings
-                  <br />
-                  1 docketed case – ready for examination
-                </span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Core themes</span>
-                <span className="text-right text-zinc-100">
-                  Edge LLMs · Privacy · AI Risk · Code Safety
-                </span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>What I ship</span>
-                <span className="text-right text-zinc-100">
-                  Working prototypes + patents
-                  <br />
-                  + publishable research
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-3 text-[11px] text-zinc-400">
-            <p>
-              If you’re evaluating senior/Staff AI PM candidates, start with{" "}
-              <span className="text-zinc-100">EdgeLLM V2</span> and{" "}
-              <span className="text-zinc-100">AI Risk Navigator</span>. They
-              show how I think about architecture, risk, and shipping under
-              regulatory and privacy constraints.
-            </p>
           </div>
         </div>
       </section>
@@ -178,13 +86,13 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-2">
             <Link
               href="/contact"
-              className="rounded-full bg-zinc-100 px-4 py-2 text-xs font-medium text-black hover:bg-zinc-200 sm:text-sm"
+              className="rounded-full bg-[var(--accent)] px-4 py-2 text-xs font-medium text-black hover:bg-[var(--accent-hover)] sm:text-sm"
             >
               Share a role / request a call
             </Link>
             <Link
               href="/projects"
-              className="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-zinc-500 sm:text-sm"
+              className="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-[var(--accent)] sm:text-sm"
             >
               Review project portfolio
             </Link>
@@ -234,79 +142,51 @@ export default function HomePage() {
           </h2>
           <Link
             href="/projects"
-            className="text-xs text-zinc-400 underline-offset-4 hover:text-zinc-100 hover:underline"
+            className="text-xs text-zinc-400 underline-offset-4 hover:text-[var(--accent)] hover:underline"
           >
             View all →
           </Link>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          <Link
-            href="/projects"
-            className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                EdgeLLM V2
+          {[
+            {
+              title: "EdgeLLM V2",
+              subtitle: "Privacy + Alignment at the edge",
+              desc: "Offline LLM assistant with self-forgetting memory and on-device alignment debugger for highly regulated environments.",
+            },
+            {
+              title: "AI Risk Navigator V2",
+              subtitle: "Deterministic AI risk engine",
+              desc: "Rule-based triage for hallucination, bias, and latency anomalies with reproducible scoring and audit-grade logs.",
+            },
+            {
+              title: "LLM Code Safety Auditor",
+              subtitle: "Offline code safety engine",
+              desc: "OWASP-style, non-generative static analysis for LLM-era code bases, designed for air-gapped environments.",
+            },
+          ].map((p) => (
+            <Link
+              key={p.title}
+              href="/projects"
+              className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-[var(--accent)]"
+            >
+              <div className="space-y-2">
+                <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                  {p.title}
+                </p>
+                <p className="font-medium text-zinc-50">{p.subtitle}</p>
+                <p className="text-xs text-zinc-400">{p.desc}</p>
+              </div>
+              <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-[var(--accent-hover)]">
+                View details →
               </p>
-              <p className="font-medium text-zinc-50">
-                Privacy + Alignment at the edge
-              </p>
-              <p className="text-xs text-zinc-400">
-                Offline LLM assistant with self-forgetting memory and on-device
-                alignment debugger for highly regulated environments.
-              </p>
-            </div>
-            <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-zinc-50">
-              See architecture &amp; patent narrative →
-            </p>
-          </Link>
-
-          <Link
-            href="/projects"
-            className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                AI Risk Navigator V2
-              </p>
-              <p className="font-medium text-zinc-50">
-                Deterministic AI risk engine
-              </p>
-              <p className="text-xs text-zinc-400">
-                Rule-based triage for hallucination, bias, and latency
-                anomalies with reproducible scoring and audit-grade logs.
-              </p>
-            </div>
-            <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-zinc-50">
-              Explore prototype &amp; research →
-            </p>
-          </Link>
-
-          <Link
-            href="/projects"
-            className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                LLM Code Safety Auditor
-              </p>
-              <p className="font-medium text-zinc-50">
-                Offline code safety engine
-              </p>
-              <p className="text-xs text-zinc-400">
-                OWASP-style, non-generative static analysis for LLM-era code
-                bases, designed for air-gapped environments.
-              </p>
-            </div>
-            <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-zinc-50">
-              View USPTO-ready design →
-            </p>
-          </Link>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* Signals: Patents / Research / Experience */}
+      {/* Signals */}
       <section
         id="signals"
         className="mx-auto w-full max-w-5xl px-4 pb-20 space-y-4"
@@ -317,7 +197,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           <Link
             href="/patents"
-            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-zinc-500"
+            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-[var(--accent)]"
           >
             <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
               Patents
@@ -333,7 +213,7 @@ export default function HomePage() {
 
           <Link
             href="/articles"
-            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-zinc-500"
+            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-[var(--accent)]"
           >
             <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
               Research &amp; writing
@@ -349,7 +229,7 @@ export default function HomePage() {
 
           <Link
             href="/experience"
-            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-zinc-500"
+            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-[var(--accent)]"
           >
             <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
               Experience
@@ -358,9 +238,8 @@ export default function HomePage() {
               Systems, ops, and AI product
             </p>
             <p className="mt-1 text-xs text-zinc-400">
-              Years of experience in large-scale release operations and
-              telemetry, now focused on AI product management in high-stakes
-              environments.
+              Experience in large-scale release operations and telemetry, now
+              focused on AI product management in high-stakes environments.
             </p>
           </Link>
         </div>
