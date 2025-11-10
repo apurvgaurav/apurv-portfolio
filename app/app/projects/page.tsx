@@ -1,311 +1,175 @@
-// app/page.tsx
-import Link from "next/link";
-
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-black text-zinc-50">
+    <div className="mx-auto max-w-6xl px-4 py-12 space-y-16">
       {/* Hero */}
-      <section
-        id="hero"
-        className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 pb-16 pt-20 sm:flex-row sm:items-center"
-      >
-        <div className="flex-1 space-y-5">
-          <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
-            Patent-backed AI Product Leader
-          </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl lg:text-5xl">
-            I build <span className="text-zinc-200">edge AI</span>,{" "}
-            <span className="text-zinc-200">safety</span>, and{" "}
-            <span className="text-zinc-200">governance</span> products that
-            survive real auditors.
-          </h1>
-          <p className="max-w-xl text-sm text-zinc-300 sm:text-base">
-            I’m <span className="text-zinc-100">Apurv Gaurav</span> – an AI
-            Product Manager operating at{" "}
-            <span className="text-zinc-100">L7+ scope</span>, with{" "}
-            <span className="text-zinc-100">
-              8+ USPTO non-provisional filings
-            </span>{" "}
-            across edge-deployed LLMs, deterministic safety engines, and code
-            security. I focus on products that can actually ship inside
-            regulated, privacy-critical environments.
-          </p>
+      <section className="space-y-6">
+        <p className="text-xs font-semibold tracking-[0.35em] text-slate-400 uppercase">
+          Patent-backed AI product leader
+        </p>
 
-          <div className="flex flex-wrap items-center gap-3 text-xs text-zinc-400">
-            <span className="rounded-full border border-zinc-700 px-3 py-1">
-              EB-1 trajectory · patents + publications + impact
-            </span>
-            <span className="rounded-full border border-zinc-700 px-3 py-1">
-              Doctor of Engineering · Penn State (in progress)
-            </span>
-            <span className="rounded-full border border-zinc-700 px-3 py-1">
-              Ex-Release Ops · large-scale systems
-            </span>
-          </div>
+        <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl">
+          I build edge AI, safety, and governance products that survive real
+          auditors.
+        </h1>
 
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Link
-              href="/projects"
-              className="rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-black hover:bg-zinc-200"
-            >
-              View flagship projects
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-full border border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-100 hover:border-zinc-500"
-            >
-              For hiring managers
-            </Link>
-          </div>
+        <p className="max-w-3xl text-sm leading-relaxed text-slate-300">
+          I&apos;m Apurv Gaurav — an AI Product Manager operating at L7+ scope,
+          with 8+ USPTO non-provisional filings across edge-deployed LLMs,
+          deterministic safety engines, and code security. I focus on products
+          that can actually ship inside regulated, privacy-critical
+          environments.
+        </p>
+
+        <div className="flex flex-wrap gap-3 text-xs">
+          <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-slate-200">
+            EB-1 trajectory · patents + publications + impact
+          </span>
+          <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-slate-200">
+            Doctor of Engineering · Penn State (in progress)
+          </span>
+          <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-slate-200">
+            Ex-Release Ops · large-scale systems
+          </span>
         </div>
 
-        <div className="mt-6 flex-1 space-y-3 sm:mt-0">
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-4 text-xs text-zinc-300">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-zinc-500">
-              Snapshot
-            </p>
-            <ul className="mt-2 space-y-1.5">
-              <li className="flex justify-between gap-4">
-                <span>USPTO status</span>
-                <span className="text-right text-zinc-100">
-                  8 non-provisional filings
-                  <br />
-                  1 docketed case – ready for examination
-                </span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>Core themes</span>
-                <span className="text-right text-zinc-100">
-                  Edge LLMs · Privacy · AI Risk · Code Safety
-                </span>
-              </li>
-              <li className="flex justify-between gap-4">
-                <span>What I ship</span>
-                <span className="text-right text-zinc-100">
-                  Working prototypes + patents
-                  <br />
-                  + publishable research
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-3 text-[11px] text-zinc-400">
-            <p>
-              If you’re evaluating senior/Staff AI PM candidates, start with{" "}
-              <span className="text-zinc-100">EdgeLLM V2</span> and{" "}
-              <span className="text-zinc-100">AI Risk Navigator</span>. They
-              show how I think about architecture, risk, and shipping under
-              regulatory and privacy constraints.
-            </p>
+        {/* For hiring managers strip */}
+        <div className="mt-6 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-4 text-sm text-slate-200">
+          <p className="text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase mb-2">
+            For hiring managers
+          </p>
+          <p className="text-sm text-slate-200">
+            Looking for an AI PM who can own patents, prototypes, and
+            production rollout — not just slideware? Start with{" "}
+            <span className="font-medium text-sky-300">
+              EdgeLLM V2, AI Risk Navigator, and LLM Code Safety Auditor.
+            </span>{" "}
+            They demonstrate how I think about architecture, risk, and shipping
+            under regulatory and privacy constraints.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3 text-xs">
+            <a
+              href="/projects"
+              className="rounded-full bg-sky-500 px-4 py-1.5 font-medium text-slate-950 hover:bg-sky-400"
+            >
+              View flagship projects
+            </a>
+            <a
+              href="/contact"
+              className="rounded-full border border-slate-600 px-4 py-1.5 font-medium text-slate-100 hover:border-slate-400"
+            >
+              Share a role / request a call
+            </a>
           </div>
         </div>
       </section>
 
-      {/* For Hiring Managers Strip */}
-      <section className="border-y border-zinc-900 bg-zinc-950/70">
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="space-y-1">
-            <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">
-              For hiring managers
-            </p>
-            <p className="text-sm text-zinc-200 sm:text-base">
-              Looking for an AI PM who can own{" "}
-              <span className="text-zinc-50">
-                patents, prototypes, and production rollout
-              </span>{" "}
-              – not just slideware?
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <Link
-              href="/contact"
-              className="rounded-full bg-zinc-100 px-4 py-2 text-xs font-medium text-black hover:bg-zinc-200 sm:text-sm"
-            >
-              Share a role / request a call
-            </Link>
-            <Link
-              href="/projects"
-              className="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-zinc-500 sm:text-sm"
-            >
-              Review project portfolio
-            </Link>
-          </div>
+      {/* Snapshot row */}
+      <section className="grid gap-8 md:grid-cols-3">
+        <div className="space-y-3">
+          <h2 className="text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            Snapshot
+          </h2>
+          <ul className="space-y-2 text-sm text-slate-300">
+            <li>8 non-provisional USPTO filings</li>
+            <li>1 docketed case – ready for examination</li>
+            <li>Edge LLMs · Privacy · AI Risk · Code safety</li>
+            <li>Working prototypes, not just decks</li>
+          </ul>
+        </div>
+
+        <div className="space-y-3">
+          <h2 className="text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            Core themes
+          </h2>
+          <ul className="space-y-2 text-sm text-slate-300">
+            <li>Deterministic safety engines for LLM outputs</li>
+            <li>Offline, on-device architectures for privacy</li>
+            <li>Audit trails that survive real regulators</li>
+            <li>Patent-backed product thinking</li>
+          </ul>
+        </div>
+
+        <div className="space-y-3">
+          <h2 className="text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            What I ship
+          </h2>
+          <ul className="space-y-2 text-sm text-slate-300">
+            <li>Patent drafts + working prototypes in sync</li>
+            <li>Research papers formatted for real venues</li>
+            <li>Demo-ready dashboards and portfolio assets</li>
+            <li>Clear documentation for VPs and engineers</li>
+          </ul>
         </div>
       </section>
 
       {/* About */}
-      <section
-        id="about"
-        className="mx-auto w-full max-w-5xl px-4 pb-16 pt-10 space-y-4"
-      >
-        <h2 className="text-sm uppercase tracking-[0.25em] text-zinc-500">
+      <section className="space-y-4">
+        <h2 className="text-sm font-semibold tracking-[0.25em] text-slate-400 uppercase">
           About
         </h2>
-        <p className="max-w-3xl text-sm text-zinc-300 sm:text-base">
-          I operate at the intersection of{" "}
-          <span className="text-zinc-100">
-            product strategy, systems thinking, and AI safety
-          </span>
-          . My work focuses on making large language models deployable in{" "}
-          <span className="text-zinc-100">
-            regulated, privacy-sensitive environments
-          </span>{" "}
-          – where audit trails, deterministic behavior, and on-device execution
-          matter as much as model quality.
+        <p className="max-w-3xl text-sm leading-relaxed text-slate-300">
+          I operate at the intersection of product strategy, systems thinking,
+          and AI safety. My work focuses on making large language models
+          deployable in regulated, privacy-sensitive environments — where audit
+          trails, deterministic behavior, and on-device execution matter as
+          much as model quality.
         </p>
-        <p className="max-w-3xl text-sm text-zinc-300 sm:text-base">
-          Over the last few years, I’ve built a portfolio of{" "}
-          <span className="text-zinc-100">patent-backed platforms</span> –
-          including an edge-deployed LLM assistant with self-forgetting memory,
-          deterministic AI risk triage for LLM outputs, and an offline
-          rule-based code safety engine. Each project is designed as a product,
-          not a demo: clear problem, architecture, GTM angle, and an execution
-          path a VP could approve.
+        <p className="max-w-3xl text-sm leading-relaxed text-slate-300">
+          Over the last few years, I&apos;ve built a portfolio of
+          patent-backed platforms — including an edge-deployed LLM assistant
+          with self-forgetting memory, deterministic AI risk triage for LLM
+          outputs, and an offline rule-based code safety engine. Each project is
+          designed as a product, not a demo: clear problem, architecture, GTM
+          angle, and an execution path a VP could approve.
         </p>
       </section>
 
-      {/* Featured Projects */}
-      <section
-        id="featured-projects"
-        className="mx-auto w-full max-w-5xl px-4 pb-16 space-y-4"
-      >
-        <div className="flex items-center justify-between gap-2">
-          <h2 className="text-sm uppercase tracking-[0.25em] text-zinc-500">
+      {/* Featured projects teaser */}
+      <section className="space-y-4">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="text-sm font-semibold tracking-[0.25em] text-slate-400 uppercase">
             Featured projects
           </h2>
-          <Link
+          <a
             href="/projects"
-            className="text-xs text-zinc-400 underline-offset-4 hover:text-zinc-100 hover:underline"
+            className="text-xs text-sky-400 hover:text-sky-300"
           >
-            View all →
-          </Link>
+            View all projects →
+          </a>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          <Link
-            href="/projects"
-            className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                EdgeLLM V2
-              </p>
-              <p className="font-medium text-zinc-50">
-                Privacy + Alignment at the edge
-              </p>
-              <p className="text-xs text-zinc-400">
-                Offline LLM assistant with self-forgetting memory and on-device
-                alignment debugger for highly regulated environments.
-              </p>
-            </div>
-            <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-zinc-50">
-              See architecture &amp; patent narrative →
+          <article className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
+            <h3 className="text-sm font-semibold text-slate-100">
+              EdgeLLM V2: Privacy + Alignment
+            </h3>
+            <p className="mt-2 text-xs text-slate-300">
+              Edge-deployed LLM with self-forgetting memory and on-device
+              alignment debugger for regulated environments.
             </p>
-          </Link>
+          </article>
 
-          <Link
-            href="/projects"
-            className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                AI Risk Navigator V2
-              </p>
-              <p className="font-medium text-zinc-50">
-                Deterministic AI risk engine
-              </p>
-              <p className="text-xs text-zinc-400">
-                Rule-based triage for hallucination, bias, and latency
-                anomalies with reproducible scoring and audit-grade logs.
-              </p>
-            </div>
-            <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-zinc-50">
-              Explore prototype &amp; research →
+          <article className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
+            <h3 className="text-sm font-semibold text-slate-100">
+              AI Risk Navigator V2
+            </h3>
+            <p className="mt-2 text-xs text-slate-300">
+              Deterministic framework for real-time LLM risk triage: hallucation
+              detection, bias flags, and latency anomalies.
             </p>
-          </Link>
+          </article>
 
-          <Link
-            href="/projects"
-            className="group flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                LLM Code Safety Auditor
-              </p>
-              <p className="font-medium text-zinc-50">
-                Offline code safety engine
-              </p>
-              <p className="text-xs text-zinc-400">
-                OWASP-style, non-generative static analysis for LLM-era code
-                bases, designed for air-gapped environments.
-              </p>
-            </div>
-            <p className="mt-3 text-xs font-medium text-zinc-200 group-hover:text-zinc-50">
-              View USPTO-ready design →
+          <article className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
+            <h3 className="text-sm font-semibold text-slate-100">
+              LLM Code Safety Auditor
+            </h3>
+            <p className="mt-2 text-xs text-slate-300">
+              Offline rule-based engine for source-code risk detection and
+              remediation, with a docketed USPTO case.
             </p>
-          </Link>
+          </article>
         </div>
       </section>
-
-      {/* Signals */}
-      <section
-        id="signals"
-        className="mx-auto w-full max-w-5xl px-4 pb-20 space-y-4"
-      >
-        <h2 className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-          Signals I bring
-        </h2>
-        <div className="grid gap-4 md:grid-cols-3">
-          <Link
-            href="/patents"
-            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-              Patents
-            </p>
-            <p className="mt-1 text-sm font-medium text-zinc-50">
-              8+ non-provisional filings
-            </p>
-            <p className="mt-1 text-xs text-zinc-400">
-              Focused on edge LLMs, deterministic safety, privacy, and code
-              security – filed pro se with end-to-end product thinking.
-            </p>
-          </Link>
-
-          <Link
-            href="/articles"
-            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-              Research &amp; writing
-            </p>
-            <p className="mt-1 text-sm font-medium text-zinc-50">
-              Papers &amp; long-form content
-            </p>
-            <p className="mt-1 text-xs text-zinc-400">
-              Bridging release engineering, observability, and modern AI product
-              strategy into publishable work and executive-level narratives.
-            </p>
-          </Link>
-
-          <Link
-            href="/experience"
-            className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-zinc-300 hover:border-zinc-500"
-          >
-            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-              Experience
-            </p>
-            <p className="mt-1 text-sm font-medium text-zinc-50">
-              Systems, ops, and AI product
-            </p>
-            <p className="mt-1 text-xs text-zinc-400">
-              Experience in large-scale release operations and telemetry, now
-              focused on AI product management in high-stakes environments.
-            </p>
-          </Link>
-        </div>
-      </section>
-    </main>
+    </div>
   );
 }
