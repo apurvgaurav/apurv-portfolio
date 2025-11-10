@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Projects",
+  description:
+    "Flagship AI platforms including EdgeLLM V2, AI Risk Navigator, and LLM Code Safety Auditor – each with clear problem, solution, and impact.",
+};
+
+
 // app/projects/page.tsx
 import Link from "next/link";
 
