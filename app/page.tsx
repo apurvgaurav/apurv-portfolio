@@ -5,43 +5,46 @@ export default function HomePage() {
   return (
     <div className="space-y-10">
       {/* Hero */}
-      <section className="bg-slate-900 text-slate-50 rounded-2xl px-6 py-10 sm:px-10 sm:py-12 shadow-sm">
+      <section className="bg-gradient-to-b from-slate-900 to-slate-800 text-slate-50 rounded-3xl px-6 py-12 sm:px-10 sm:py-14 shadow-lg">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
-          <div className="space-y-4">
+          <div className="space-y-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/80">
+              AI Product · Edge AI · Safety &amp; Governance
+            </p>
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
               Apurv Gaurav —{" "}
               <span className="text-blue-300">Patent-Backed AI Product Leader</span>
             </h1>
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl">
               Designing and scaling deterministic AI systems that protect privacy,
               enforce alignment, and survive real-world constraints.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/experience"
-                className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-400 transition-colors"
+                className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 transition-colors"
               >
                 View Experience
               </Link>
               <Link
                 href="/patents"
-                className="inline-flex items-center justify-center rounded-md border border-slate-600 px-4 py-2 text-sm font-medium text-slate-100 hover:bg-slate-800 transition-colors"
+                className="inline-flex items-center justify-center rounded-md border border-slate-600 px-4 py-2 text-sm font-medium text-slate-100 hover:bg-slate-800/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 transition-colors"
               >
                 Explore Patents
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-slate-100 hover:text-blue-200 transition-colors"
+                className="inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-slate-100 hover:text-blue-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 transition-colors"
               >
                 Contact
               </Link>
             </div>
           </div>
-          <div className="border border-slate-700 rounded-xl p-4 sm:p-6 bg-slate-900/60">
+          <div className="border border-slate-700/60 rounded-2xl p-4 sm:p-6 bg-slate-900/40">
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3">
               Snapshot
             </p>
-            <ul className="space-y-2 text-sm text-slate-100">
+            <ul className="space-y-2 text-sm text-slate-100 leading-relaxed">
               <li>
                 • Edge-deployed LLMs, deterministic safety engines, and
                 code-security frameworks.
@@ -89,7 +92,7 @@ export default function HomePage() {
           Focus Areas
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
             <p className="text-sm font-semibold text-slate-900">
               Edge AI &amp; Privacy
             </p>
@@ -98,7 +101,7 @@ export default function HomePage() {
               powerful LLM capabilities.
             </p>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
             <p className="text-sm font-semibold text-slate-900">
               Deterministic AI Safety
             </p>
@@ -107,7 +110,7 @@ export default function HomePage() {
               auditable, and regulator-friendly.
             </p>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
             <p className="text-sm font-semibold text-slate-900">
               Code Security &amp; Traceability
             </p>
@@ -144,7 +147,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           <Link
             href="/experience"
-            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 transition-colors"
+            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 hover:shadow-md transition-colors transition-shadow"
           >
             <p className="text-sm font-semibold text-slate-900 mb-1">
               Experience
@@ -156,7 +159,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/patents"
-            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 transition-colors"
+            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 hover:shadow-md transition-colors transition-shadow"
           >
             <p className="text-sm font-semibold text-slate-900 mb-1">Patents</p>
             <p className="text-xs text-slate-600">
@@ -166,7 +169,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/contact"
-            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 transition-colors"
+            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 hover:shadow-md transition-colors transition-shadow"
           >
             <p className="text-sm font-semibold text-slate-900 mb-1">Contact</p>
             <p className="text-xs text-slate-600">
