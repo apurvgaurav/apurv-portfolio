@@ -18,19 +18,23 @@ export default function HomePage() {
           privacy-critical environments.
         </p>
 
-        <div className="flex flex-wrap gap-3 text-[11px] md:text-xs">
-          <span className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-slate-200">
-            8+ USPTO non-provisional filings
-          </span>
-          <span className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-slate-200">
-            Doctor of Engineering · Penn State (in progress)
-          </span>
-          <span className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-slate-200">
-            Edge AI · Safety · Code security
-          </span>
+        {/* Proof bar */}
+        <div className="grid gap-4 text-[11px] text-slate-300 sm:grid-cols-3">
+          <div>
+            <p className="font-semibold text-slate-100">8+</p>
+            <p>USPTO non-provisional filings, drafted and filed pro se.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-100">DEng in progress</p>
+            <p>Doctor of Engineering at Penn State, focused on innovation &amp; systems.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-100">Edge AI &amp; safety</p>
+            <p>Portfolio of platforms: EdgeLLM V2, AI Risk Navigator, Code Safety Auditor.</p>
+          </div>
         </div>
 
-        <div className="flex flex-wrap gap-3 text-xs mt-4">
+        <div className="flex flex-wrap gap-3 text-xs mt-2">
           <a
             href="/projects"
             className="rounded-full bg-sky-500 px-4 py-1.5 font-medium text-slate-950 hover:bg-sky-400"
@@ -46,7 +50,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Short pitch for hiring managers */}
+      {/* For hiring managers */}
       <section className="space-y-4 border-t border-slate-800 pt-10">
         <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
           For hiring managers
@@ -66,7 +70,7 @@ export default function HomePage() {
         </ul>
       </section>
 
-      {/* Navigation cards into deeper pages */}
+      {/* Explore the portfolio */}
       <section className="space-y-4 border-t border-slate-800 pt-10">
         <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
           Explore the portfolio
@@ -82,7 +86,7 @@ export default function HomePage() {
             </p>
             <p className="text-xs leading-relaxed text-slate-300">
               Flagship AI platforms like EdgeLLM V2, AI Risk Navigator, and LLM Code Safety
-              Auditor — with problem, outcome, and artifacts.
+              Auditor — with problem, solution, and impact.
             </p>
             <p className="mt-3 text-[11px] text-sky-400 group-hover:text-sky-300">
               View projects →
@@ -109,14 +113,14 @@ export default function HomePage() {
             className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 transition hover:border-sky-500/70 hover:bg-slate-900"
           >
             <p className="text-xs font-semibold text-slate-100 mb-1">
-              Patents
+              Patents &amp; publications
             </p>
             <p className="text-xs leading-relaxed text-slate-300">
-              8+ non-provisional filings across edge AI, safety, and code security,
-              drafted and filed independently.
+              8+ non-provisional filings plus research papers in progress, all aligned to edge
+              AI, safety, and code security.
             </p>
             <p className="mt-3 text-[11px] text-sky-400 group-hover:text-sky-300">
-              View patents →
+              View IP portfolio →
             </p>
           </a>
         </div>
