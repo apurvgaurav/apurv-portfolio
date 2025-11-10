@@ -1,135 +1,178 @@
-export const metadata = {
-  title: "Home",
-  description:
-    "Portfolio of Apurv Gaurav – patent-backed AI Product Leader focused on edge-deployed LLMs, deterministic AI safety, and code security.",
-};
-
+// app/page.tsx
+import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-5xl px-4 pb-16 pt-14 space-y-16 md:px-6 md:pb-24 md:pt-20">
+    <div className="space-y-10">
       {/* Hero */}
-      <section className="space-y-6">
-        <p className="text-[11px] font-semibold tracking-[0.35em] text-slate-400 uppercase">
-          Patent-backed AI product leader
-        </p>
-
-        <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-[2.5rem] md:leading-tight">
-          I build edge AI, safety, and governance products that survive real auditors.
-        </h1>
-
-        <p className="max-w-3xl text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-          I&apos;m Apurv Gaurav — an AI Product Manager operating at L7+ scope, with 8+ USPTO
-          non-provisional filings across edge-deployed LLMs, deterministic safety engines, and
-          code security. I focus on products that can actually ship inside regulated,
-          privacy-critical environments.
-        </p>
-
-        {/* Proof bar */}
-        <div className="grid gap-4 text-[11px] text-slate-300 sm:grid-cols-3">
-          <div>
-            <p className="font-semibold text-slate-100">8+</p>
-            <p>USPTO non-provisional filings, drafted and filed pro se.</p>
+      <section className="bg-slate-900 text-slate-50 rounded-2xl px-6 py-10 sm:px-10 sm:py-12 shadow-sm">
+        <div className="grid gap-8 md:grid-cols-2 md:items-center">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+              Apurv Gaurav —{" "}
+              <span className="text-blue-300">Patent-Backed AI Product Leader</span>
+            </h1>
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+              Designing and scaling deterministic AI systems that protect privacy,
+              enforce alignment, and survive real-world constraints.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Link
+                href="/experience"
+                className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-400 transition-colors"
+              >
+                View Experience
+              </Link>
+              <Link
+                href="/patents"
+                className="inline-flex items-center justify-center rounded-md border border-slate-600 px-4 py-2 text-sm font-medium text-slate-100 hover:bg-slate-800 transition-colors"
+              >
+                Explore Patents
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-slate-100 hover:text-blue-200 transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
-          <div>
-            <p className="font-semibold text-slate-100">DEng in progress</p>
-            <p>Doctor of Engineering at Penn State, focused on innovation &amp; systems.</p>
+          <div className="border border-slate-700 rounded-xl p-4 sm:p-6 bg-slate-900/60">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3">
+              Snapshot
+            </p>
+            <ul className="space-y-2 text-sm text-slate-100">
+              <li>
+                • Edge-deployed LLMs, deterministic safety engines, and
+                code-security frameworks.
+              </li>
+              <li>
+                • Architectures designed for environments with security, legal,
+                and regulatory scrutiny.
+              </li>
+              <li>
+                • Prototypes that run, patents filed, and research in submission
+                — not just slideware.
+              </li>
+            </ul>
           </div>
-          <div>
-            <p className="font-semibold text-slate-100">Edge AI &amp; safety</p>
-            <p>Portfolio of platforms: EdgeLLM V2, AI Risk Navigator, Code Safety Auditor.</p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-3 text-xs mt-2">
-          <a
-            href="/projects"
-            className="rounded-full bg-sky-500 px-4 py-1.5 font-medium text-slate-950 hover:bg-sky-400"
-          >
-            View flagship projects
-          </a>
-          <a
-            href="/experience"
-            className="rounded-full border border-slate-600 px-4 py-1.5 font-medium text-slate-100 hover:border-slate-400"
-          >
-            For hiring managers
-          </a>
         </div>
       </section>
 
-      {/* For hiring managers */}
-      <section className="space-y-4 border-t border-slate-800 pt-10">
-        <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-          For hiring managers
-        </h2>
-        <p className="max-w-3xl text-sm leading-relaxed text-slate-300 md:text-[0.94rem]">
-          If you&apos;re hiring for senior AI product roles, treat this site as a portfolio of
-          <span className="text-slate-100">
-            {" "}patent-backed, prototype-backed AI platforms
-          </span>{" "}
-          — not slideware. The projects and patents here show how I think about architecture,
-          risk, and shipping under regulatory and privacy constraints.
-        </p>
-        <ul className="mt-2 space-y-1.5 text-sm text-slate-300 md:text-[0.94rem]">
-          <li>• Edge-deployed LLMs with real privacy constraints.</li>
-          <li>• Deterministic safety and governance engines, not model-on-model vibes.</li>
-          <li>• Code security and traceability designed for auditors and security teams.</li>
-        </ul>
+      {/* Proof Bar */}
+      <section className="bg-white rounded-2xl px-4 py-4 sm:px-6 sm:py-5 shadow-sm border border-slate-100">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-slate-700">
+          <div className="flex items-center gap-2">
+            <span className="text-lg">🧠</span>
+            <span className="font-medium">
+              8 Non-Provisional AI Patent Applications Filed Pro Se
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">📘</span>
+              <span className="text-sm">
+                DEng (In Progress), Penn State World Campus
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">🎓</span>
+              <span className="text-sm">MS, University of Pennsylvania</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Explore the portfolio */}
-      <section className="space-y-4 border-t border-slate-800 pt-10">
-        <h2 className="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">
-          Explore the portfolio
+      {/* Focus Areas */}
+      <section className="space-y-4">
+        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
+          Focus Areas
         </h2>
-
         <div className="grid gap-4 md:grid-cols-3">
-          <a
-            href="/projects"
-            className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 transition hover:border-sky-500/70 hover:bg-slate-900"
-          >
-            <p className="text-xs font-semibold text-slate-100 mb-1">
-              Projects
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900">
+              Edge AI &amp; Privacy
             </p>
-            <p className="text-xs leading-relaxed text-slate-300">
-              Flagship AI platforms like EdgeLLM V2, AI Risk Navigator, and LLM Code Safety
-              Auditor — with problem, solution, and impact.
+            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+              Architectures that keep sensitive data on-device while still enabling
+              powerful LLM capabilities.
             </p>
-            <p className="mt-3 text-[11px] text-sky-400 group-hover:text-sky-300">
-              View projects →
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900">
+              Deterministic AI Safety
             </p>
-          </a>
+            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+              Rule-based evaluation pipelines that make model behavior reproducible,
+              auditable, and regulator-friendly.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+            <p className="text-sm font-semibold text-slate-900">
+              Code Security &amp; Traceability
+            </p>
+            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+              Offline analysis and remediation engines that harden LLM-generated
+              code before it ever hits production.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <a
+      {/* For Hiring Managers */}
+      <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
+        <h2 className="text-lg sm:text-xl font-semibold tracking-tight">
+          For Hiring Managers
+        </h2>
+        <p className="text-sm text-slate-700 leading-relaxed">
+          I work where AI product strategy, system design, and governance intersect.
+          I don&apos;t just ship demos. I design deterministic safety frameworks,
+          edge-deployed architectures, and patent-backed systems that can be
+          defended in front of legal, security, and regulators.
+        </p>
+        <p className="text-sm text-slate-700 leading-relaxed">
+          If you&apos;re hiring for an AI Product role operating at L7/L8 scope,
+          this site shows how I think, what I&apos;ve built, and how I execute.
+        </p>
+      </section>
+
+      {/* Navigation Cards */}
+      <section className="space-y-4">
+        <h2 className="text-lg sm:text-xl font-semibold tracking-tight">
+          Jump to What You Need
+        </h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <Link
             href="/experience"
-            className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 transition hover:border-sky-500/70 hover:bg-slate-900"
+            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 transition-colors"
           >
-            <p className="text-xs font-semibold text-slate-100 mb-1">
+            <p className="text-sm font-semibold text-slate-900 mb-1">
               Experience
             </p>
-            <p className="text-xs leading-relaxed text-slate-300">
-              How release ops, systems thinking, and a DEng track map into L7+ AI product work.
+            <p className="text-xs text-slate-600">
+              How I&apos;ve delivered across enterprise platforms and an independent
+              AI product lab.
             </p>
-            <p className="mt-3 text-[11px] text-sky-400 group-hover:text-sky-300">
-              View experience →
-            </p>
-          </a>
-
-          <a
+          </Link>
+          <Link
             href="/patents"
-            className="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 transition hover:border-sky-500/70 hover:bg-slate-900"
+            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 transition-colors"
           >
-            <p className="text-xs font-semibold text-slate-100 mb-1">
-              Patents &amp; publications
+            <p className="text-sm font-semibold text-slate-900 mb-1">Patents</p>
+            <p className="text-xs text-slate-600">
+              High-level view of my original architectures for deterministic AI
+              safety, edge deployment, and code security.
             </p>
-            <p className="text-xs leading-relaxed text-slate-300">
-              8+ non-provisional filings plus research papers in progress, all aligned to edge
-              AI, safety, and code security.
+          </Link>
+          <Link
+            href="/contact"
+            className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm hover:border-blue-500 hover:bg-blue-50/40 transition-colors"
+          >
+            <p className="text-sm font-semibold text-slate-900 mb-1">Contact</p>
+            <p className="text-xs text-slate-600">
+              Direct line for roles, collaboration, and media.
             </p>
-            <p className="mt-3 text-[11px] text-sky-400 group-hover:text-sky-300">
-              View IP portfolio →
-            </p>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
