@@ -1,8 +1,12 @@
+/* Tailwind layers – MUST be first */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ------------------------------
-   Global Styles – Deep Graphite Theme
+   Deep Graphite Theme
    ------------------------------ */
 
-/* Base colors */
 :root {
   --bg-gradient: radial-gradient(circle at 30% 20%, #111111, #0b0b0d 80%);
   --text-primary: #e4e4e7;
@@ -12,77 +16,37 @@
   --accent-hover: #2dd4bf;
 }
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
+/* Base html/body styling (Tailwind still works on top of this) */
+html {
+  min-height: 100%;
   background: var(--bg-gradient);
+}
+
+body {
+  min-height: 100%;
   color: var(--text-primary);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings & text */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
+/* Optional: slightly softer default paragraph color */
 p {
   color: var(--text-secondary);
-  line-height: 1.6;
 }
 
-/* Links */
+/* Accent links (on top of Tailwind utilities) */
 a {
-  color: var(--accent);
   text-decoration: none;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
-a:hover {
-  color: var(--accent-hover);
-}
-
-/* Borders */
-.border {
-  border-color: var(--border);
-}
-
-/* Buttons */
-button, .btn {
-  cursor: pointer;
-  background-color: var(--accent);
-  color: black;
-  border: none;
-  border-radius: 9999px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--accent-hover);
-}
-
-/* Section spacing */
-section {
-  scroll-margin-top: 5rem;
-}
-
-/* Scrollbar styling (for dark aesthetic) */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0b0d;
+  background: #050507;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #2dd4bf33;
@@ -92,19 +56,18 @@ section {
   background-color: #14b8a6;
 }
 
-/* Footer */
-footer {
-  color: var(--text-secondary);
-}
-
-/* Small glow accent behind hero title */
+/* Soft glow behind hero content */
 .hero-glow {
-  background: radial-gradient(circle at center, rgba(20, 184, 166, 0.12), transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 184, 166, 0.16),
+    transparent 70%
+  );
   filter: blur(40px);
   position: absolute;
-  width: 400px;
-  height: 400px;
-  top: -100px;
-  left: -100px;
+  width: 380px;
+  height: 380px;
+  top: -80px;
+  left: -80px;
   z-index: 0;
 }
