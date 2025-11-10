@@ -5,15 +5,14 @@ export type ArticleStatus = "Published";
 export type Article = {
   title: string;
   subtitle: string;
-  date: string; // e.g. "Nov 6, 2025"
+  date: string;
   status: ArticleStatus;
-  href: string; // LinkedIn or external link
+  href: string;
 };
 
 export const articles: Article[] = [
   {
-    title:
-      "Building Products That Learn Without Leaking Data",
+    title: "Building Products That Learn Without Leaking Data",
     subtitle:
       "Patterns for designing AI products that improve over time while keeping sensitive user data out of third-party models and vendors.",
     date: "Nov 6, 2025",
