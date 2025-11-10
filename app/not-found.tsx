@@ -9,7 +9,7 @@ export default function NotFound() {
       </h1>
       <p className="text-sm sm:text-base text-slate-600 max-w-md">
         You&apos;ve hit a route that doesn&apos;t exist on this site. Let&apos;s
-        get you back to the actual work: patents, products, and impact.
+        get you back to the work that matters — patents, products, and impact.
       </p>
       <Link
         href="/"
