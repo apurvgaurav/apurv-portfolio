@@ -187,38 +187,42 @@ export default function ExperiencePage() {
       </section>
 
       {/* Education */}
-      <section className="space-y-4">
-        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Education
-        </h2>
-        <div className="space-y-3">
-          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
-            <p className="text-sm font-semibold text-slate-900">
-              Doctor of Engineering (DEng), Engineering
-            </p>
-            <p className="text-xs text-slate-600">
-              Penn State World Campus · In Progress
-            </p>
-          </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
-            <p className="text-sm font-semibold text-slate-900">
-              Master of Science
-            </p>
-            <p className="text-xs text-slate-600">
-              University of Pennsylvania · 2010
-            </p>
-          </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
-            <p className="text-sm font-semibold text-slate-900">
-              Bachelor of Technology
-            </p>
-            <p className="text-xs text-slate-600">
-              {/* Replace with your institution and discipline */}
-              [Your Institution Name] · [Discipline]
-            </p>
-          </div>
-        </div>
-      </section>
+<section className="space-y-5 mt-10">
+  <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Education</h2>
+
+  <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <h3 className="text-base font-semibold text-slate-900">
+        🧠 Doctor of Engineering (DEng), Artificial Intelligence (In Progress)
+      </h3>
+      <p className="text-sm text-slate-600">Penn State World Campus</p>
+    </div>
+    <p className="mt-1 text-sm text-slate-700">Focus: Applied AI Systems · Product Innovation · Governance Frameworks</p>
+  </div>
+
+  <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <h3 className="text-base font-semibold text-slate-900">🎓 Master of Science (MS)</h3>
+      <p className="text-sm text-slate-600">University of Pennsylvania</p>
+    </div>
+    <p className="mt-1 text-sm text-slate-700">Focus: Systems Engineering · Analytics · Machine Learning Foundations</p>
+  </div>
+
+  <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <h3 className="text-base font-semibold text-slate-900">
+        💻 Bachelor of Information Technology
+      </h3>
+      <p className="text-sm text-slate-600">
+        Acropolis Institute of Technology and Research, Indore, India
+      </p>
+    </div>
+    <p className="mt-1 text-sm text-slate-700">
+      Focus: Software Engineering · Networks · Applied Computer Science
+    </p>
+  </div>
+</section>
+
 
       {/* CTA Strip */}
       <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
