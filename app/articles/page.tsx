@@ -1,23 +1,32 @@
 // app/articles/page.tsx
 
-type ArticleCardProps = {
-  title: string;
-  status: string;
-  description: string;
-};
+import { articles, type Article } from "./data";
 
-function ArticleCard({ title, status, description }: ArticleCardProps) {
+function ArticleCard({ article }: { article: Article }) {
+  const { title, subtitle, date, href } = article;
+
   return (
-    <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
+    <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
-        <p className="text-sm font-semibold text-slate-900">{title}</p>
-        <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[11px] font-medium text-slate-700">
-          {status}
+        <div className="space-y-1">
+          <p className="text-sm font-semibold text-slate-900">{title}</p>
+          <p className="text-[11px] text-slate-500">{date}</p>
+        </div>
+        <span className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-medium text-emerald-800">
+          Published
         </span>
       </div>
-      <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-        {description}
-      </p>
+      <p className="mt-2 text-xs text-slate-600 leading-relaxed">{subtitle}</p>
+      <div className="mt-3">
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center text-xs font-medium text-blue-600 hover:text-blue-500 underline underline-offset-2"
+        >
+          Read on LinkedIn
+        </a>
+      </div>
     </div>
   );
 }
@@ -25,59 +34,38 @@ function ArticleCard({ title, status, description }: ArticleCardProps) {
 export default function ArticlesPage() {
   return (
     <div className="space-y-8">
+      {/* Intro */}
       <section className="space-y-4">
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-          Articles &amp; Writing
+          Articles
         </h1>
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-3xl">
-          I write about the gap between infrastructure and intelligent systems —
-          and what it takes to ship AI products that survive real-world
-          constraints. This is the hub for my articles and series. Some are
-          already drafted; others are in active planning.
-        </p>
-        <p className="text-xs text-slate-600 max-w-3xl">
-          The ideas discussed here expand on frameworks I&apos;ve formally
-          documented through eight non-provisional USPTO filings and related
-          research papers in submission to venues such as Frontiers in AI and
-          IEEE.
+          I publish regularly on LinkedIn — usually mid-week — on how to design AI
+          products that survive real-world constraints. This page keeps those
+          articles in one place and links out to the originals.
         </p>
       </section>
 
+      {/* List of real articles only */}
       <section className="space-y-4">
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Article Pipeline
+          Latest Articles
         </h2>
         <div className="space-y-4">
-          <ArticleCard
-            title="What AI PMs Can Learn from Continuous Delivery"
-            status="Draft / Coming Soon"
-            description="Using classic release engineering principles—canaries, observability, progressive rollout—to design safer AI products and policy-driven LLM deployments."
-          />
-          <ArticleCard
-            title="From Infra to Intelligence: Designing AI Products That Survive Production"
-            status="Planned"
-            description="How to think about AI products as end-to-end systems: data, infra, safety layers, and feedback loops—not just prompts and UI."
-          />
-          <ArticleCard
-            title="EdgeLLM V2 Deep Dive: Self-Forgetting Memory & On-Device Alignment"
-            status="Draft / Coming Soon"
-            description="A technical walkthrough of my EdgeLLM V2 architecture—how self-forgetting storage and deterministic alignment debugging work together."
-          />
-          <ArticleCard
-            title="Deterministic AI Risk Scoring: Lessons from AI Risk Navigator"
-            status="Planned"
-            description="What I’ve learned building a rule-based LLM risk triage engine, and why determinism matters for compliance and reproducibility."
-          />
+          {articles.map((article) => (
+            <ArticleCard key={article.title} article={article} />
+          ))}
         </div>
       </section>
 
+      {/* Follow CTA */}
       <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
         <p className="text-sm font-semibold text-slate-900">
-          Follow for New Articles
+          See new pieces as they ship
         </p>
         <p className="text-xs text-slate-600">
-          Most articles will be published on LinkedIn first and then archived
-          here. Follow me there if you want to see ideas as they ship.
+          New articles go live on LinkedIn first, then get indexed here. Follow
+          me there if you want to see the full thread and discussion.
         </p>
         <a
           href="https://linkedin.com/in/apurvgaurav"
