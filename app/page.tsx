@@ -134,8 +134,9 @@ export default function HomePage() {
           defended in front of legal, security, and regulators.
         </p>
         <p className="text-sm text-slate-700 leading-relaxed">
-          If you&apos;re hiring for an AI Product role operating at L7/L8 scope,
-          this site shows how I think, what I&apos;ve built, and how I execute.
+          If you&apos;re hiring for senior or strategic AI Product roles,
+this site shows how I think, what I&apos;ve built, and how I execute.
+
         </p>
       </section>
 
