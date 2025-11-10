@@ -30,7 +30,7 @@ export default function ContactPage() {
           <p>
             🔗{" "}
             <a
-              href="https://linkedin.com/in/apurvgaurav"
+              href="https://www.linkedin.com/in/apurv-gaurav/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-500 underline-offset-2 hover:underline"
