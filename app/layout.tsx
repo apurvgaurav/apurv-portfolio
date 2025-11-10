@@ -36,9 +36,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-slate-950 text-slate-100 antialiased">
         <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-          {/* Top Navigation */}
+          {/* 🌟 Top Navigation Bar */}
           <header className="border-b border-slate-800/60 bg-slate-950/80 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+              {/* Logo / Name */}
               <Link
                 href="/"
                 className="text-sm font-semibold tracking-tight text-slate-100"
@@ -46,6 +47,8 @@ export default function RootLayout({
                 <span className="font-bold text-emerald-400">Apurv</span>{" "}
                 Gaurav
               </Link>
+
+              {/* Navigation Links */}
               <nav className="hidden gap-6 text-xs font-medium text-slate-300 md:flex">
                 <Link
                   href="/#projects"
@@ -71,8 +74,9 @@ export default function RootLayout({
                 >
                   About
                 </Link>
+                {/* ✅ Updated: Contact now links to its own page */}
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="hover:text-emerald-300"
                 >
                   Contact
@@ -81,7 +85,7 @@ export default function RootLayout({
             </div>
           </header>
 
-          {/* Page content */}
+          {/* 📄 Page Content */}
           <div className="mx-auto max-w-6xl px-4 pb-10 pt-8 md:pt-10">
             {children}
           </div>
