@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Contact",
+  description:
+    "Reach out to Apurv Gaurav about senior AI product roles, collaborations on AI safety and governance, or edge AI research.",
+};
+
+
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-16 pt-12 space-y-12 md:px-6 md:pb-24 md:pt-16">
