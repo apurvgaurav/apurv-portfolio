@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { MainNav } from "../components/main-nav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,20 +11,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Apurv Gaurav – Patent-Backed AI Product Leader",
+  metadataBase: new URL("https://apurvgaurav.ai"),
+  title: {
+    default: "Apurv Gaurav – Patent-Backed AI Product Leader",
+    template: "%s – Apurv Gaurav",
+  },
   description:
-    "Apurv Gaurav builds edge AI, safety, and governance products that survive real auditors.",
+    "Apurv Gaurav is a patent-backed AI Product Leader focused on edge-deployed LLMs, deterministic AI safety, and code security — building products that survive real auditors.",
+  openGraph: {
+    title: "Apurv Gaurav – Patent-Backed AI Product Leader",
+    description:
+      "Edge AI, privacy & alignment specialist. Deterministic AI safety and governance frameworks with 8+ USPTO non-provisional filings.",
+    url: "https://apurvgaurav.ai",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apurv Gaurav – Patent-Backed AI Product Leader",
+    description:
+      "Edge AI, privacy & alignment specialist. Deterministic AI safety and governance frameworks with 8+ USPTO non-provisional filings.",
+  },
 };
-
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Experience", href: "/experience" },
-  { name: "Patents", href: "/patents" },
-  { name: "Media", href: "/media" },
-  { name: "Articles", href: "/articles" },
-  { name: "Contact", href: "/contact" },
-];
 
 export default function RootLayout({
   children,
@@ -45,42 +53,53 @@ export default function RootLayout({
                 </span>
               </Link>
 
-              <nav className="hidden items-center gap-4 text-xs text-slate-300 md:flex">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="rounded-full px-3 py-1 font-medium tracking-[0.16em] uppercase transition hover:bg-slate-800 hover:text-slate-100"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </nav>
+              <MainNav />
             </div>
           </header>
 
           {/* Page content */}
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
 
           {/* Global footer */}
           <footer className="border-t border-slate-800 bg-[#020617]/95">
-            <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-[11px] text-slate-400 md:flex-row md:items-center md:justify-between md:px-6">
+            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-[11px] text-slate-400 md:flex-row md:items-center md:justify-between md:px-6">
               <div className="space-y-1">
                 <p className="font-medium text-slate-300">
                   Patent-backed AI product leader.
                 </p>
                 <p>
-                  Edge LLMs · Privacy · AI risk · Code safety · Governance
-                  under real auditors.
+                  Edge LLMs · Privacy · AI risk · Code safety · Governance under
+                  real auditors.
                 </p>
               </div>
+
               <div className="space-y-1 text-left md:text-right">
                 <p>© {year} Apurv Gaurav</p>
-                <p>
-                  Built with Next.js, Tailwind CSS, and Vercel.
-                </p>
+                <div className="flex flex-wrap gap-3 md:justify-end">
+                  <a
+                    href="mailto:apurvgaurav@gmail.com"
+                    className="underline underline-offset-4 hover:text-sky-300"
+                  >
+                    apurvgaurav@gmail.com
+                  </a>
+                  <span className="text-slate-600">·</span>
+                  <a
+                    href="https://www.linkedin.com/in/apurvgaurav"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline underline-offset-4 hover:text-sky-300"
+                  >
+                    LinkedIn
+                  </a>
+                  {/* Optional: update href to your real PDF path when ready */}
+                  <span className="text-slate-600">·</span>
+                  <a
+                    href="/Apurv-Gaurav-Resume.pdf"
+                    className="underline underline-offset-4 hover:text-sky-300"
+                  >
+                    Download resume
+                  </a>
+                </div>
               </div>
             </div>
           </footer>
