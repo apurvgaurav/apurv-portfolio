@@ -101,15 +101,16 @@ export default function ExperiencePage() {
             <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
               Narrative View
             </p>
-            <p className="text-sm text-slate-700 leading-relaxed">
-              At Comcast, I&apos;ve spent over a decade shaping how large-scale network
-              platforms evolve with AI. I work at the intersection of data, reliability,
-              and innovation — translating system telemetry into predictive intelligence
-              that keeps millions of homes connected. My focus has been on building
-              privacy-preserving, edge-optimized AI systems that reduce downtime,
-              improve customer experience, and prepare Comcast for the next wave of
-              intelligent network management.
-            </p>
+        <p className="text-sm text-slate-700 leading-relaxed">
+  At Comcast, I work on how large-scale network platforms evolve with AI.
+  I operate at the intersection of data, reliability, and innovation —
+  translating system telemetry into predictive intelligence that keeps
+  millions of homes connected. My focus has been on building
+  privacy-preserving, edge-optimized AI systems that reduce downtime,
+  improve customer experience, and prepare Comcast for the next wave of
+  intelligent network management.
+</p>
+
             <p className="text-sm text-slate-700 leading-relaxed">
               This role strengthened my belief that AI product management isn&apos;t just
               about algorithms; it&apos;s about orchestration — aligning people,
