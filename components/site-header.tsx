@@ -1,48 +1,58 @@
-// components/site-header.tsx
+// components/Header.tsx
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useMemo } from "react";
 
 const navItems = [
-  { href: "/story", label: "Story" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/patents", label: "Evidence" },
-  { href: "/articles", label: "Articles" },
+  { href: "/", label: "Home" },
   { href: "/experience", label: "Experience" },
+  { href: "/patents", label: "Patents" },
   { href: "/media", label: "Media" },
+  { href: "/articles", label: "Articles" },
   { href: "/contact", label: "Contact" },
 ];
 
-export function SiteHeader() {
+export default function Header() {
   const pathname = usePathname();
 
+  const activePath = useMemo(() => {
+    if (!pathname) return "/";
+    if (pathname === "/") return "/";
+    // normalize for nested routes if added later
+    const segments = pathname.split("/").filter(Boolean);
+    return "/" + (segments[0] || "");
+  }, [pathname]);
+
   return (
-    <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
-        <Link href="/" className="flex flex-col">
-          <span className="text-sm font-semibold tracking-[0.18em] text-slate-200 uppercase">
+    <header className="border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-baseline gap-2">
+          <span className="text-lg font-semibold tracking-tight">
             Apurv Gaurav
           </span>
-          <span className="text-[10px] text-slate-500">
+          <span className="hidden sm:inline text-xs text-slate-500">
             Patent-Backed AI Product Leader
           </span>
         </Link>
-        <nav className="hidden items-center gap-6 text-xs text-slate-300 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={[
-                "transition hover:text-blue-400",
-                pathname === item.href ? "text-blue-400" : "",
-              ]
-                .filter(Boolean)
-                .join(" ")}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="flex items-center gap-4 text-sm font-medium">
+          {navItems.map((item) => {
+            const isActive = activePath === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`px-2 py-1 rounded-md transition-colors ${
+                  isActive
+                    ? "text-slate-900 bg-slate-100"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>
