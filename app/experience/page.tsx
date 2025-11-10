@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Experience",
+  description:
+    "Apurv Gaurav’s background across platform/release operations, independent AI product lab, and DEng studies – mapped to L7+ AI product work.",
+};
+
+
 export default function ExperiencePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-16 pt-12 space-y-12 md:px-6 md:pb-24 md:pt-16">
