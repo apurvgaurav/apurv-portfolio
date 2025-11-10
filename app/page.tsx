@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Home",
+  description:
+    "Portfolio of Apurv Gaurav – patent-backed AI Product Leader focused on edge-deployed LLMs, deterministic AI safety, and code security.",
+};
+
+
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16 pt-14 space-y-16 md:px-6 md:pb-24 md:pt-20">
