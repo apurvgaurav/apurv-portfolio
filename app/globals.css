@@ -71,3 +71,30 @@ a {
   left: -80px;
   z-index: 0;
 }
+/* Fix unstyled blue/purple link color issues */
+a:visited {
+  color: var(--accent);
+}
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Ensure Tailwind typography doesn't get overridden */
+.text-zinc-50 {
+  color: #e4e4e7 !important;
+}
+.text-zinc-100 {
+  color: #f4f4f5 !important;
+}
+.text-zinc-300 {
+  color: #d4d4d8 !important;
+}
+.text-zinc-400 {
+  color: #a1a1aa !important;
+}
+.text-zinc-500 {
+  color: #71717a !important;
+}
