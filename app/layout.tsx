@@ -28,10 +28,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-100">
+      <body className="bg-slate-900 text-slate-100">
         <div className="flex min-h-screen flex-col">
           {/* Global header */}
-          <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+          <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-900/80 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
               <Link href="/" className="flex items-center gap-2">
                 <span className="text-sm font-semibold tracking-[0.2em] text-slate-400 uppercase">
@@ -57,7 +57,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
 
           {/* Global footer */}
-          <footer className="border-t border-slate-800 bg-slate-950/90">
+          <footer className="border-t border-slate-800 bg-slate-900/90">
             <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="font-medium text-slate-300">
