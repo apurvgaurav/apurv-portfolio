@@ -74,6 +74,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
+        <html lang="en" className="bg-[#0b0b0d] text-zinc-50">
         <div className="flex min-h-screen flex-col">
           {/* Global header / nav */}
           <header className="sticky top-0 z-20 border-b border-zinc-900 bg-black/80 backdrop-blur">
