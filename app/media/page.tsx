@@ -79,6 +79,7 @@ export default function MediaPage() {
       </section>
 
       {/* Community Engagement */}
+          {/* Community Engagement */}
       <section className="mt-4">
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Community Engagement
@@ -86,35 +87,33 @@ export default function MediaPage() {
         <div className="space-y-6">
           <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
             <h3 className="text-lg font-semibold text-indigo-700">
-              Invited to AI Policy &amp; Leadership Roundtable
+              Invited: Telecom Innovation &amp; Trust Roundtable
             </h3>
             <p className="mt-2 text-gray-700">
-              Received a LinkedIn invitation to attend a closed-door industry
-              session on{" "}
+              Personal invitation to a{" "}
+              <span className="font-medium">private virtual roundtable</span>{" "}
+              with senior leaders from Lyca Mobile, Three, Tango and others on:
               <span className="font-medium">
-                &quot;AI Governance and Product Responsibility&quot;
-              </span>{" "}
-              hosted by leading AI professionals.
+                {" "}
+                &quot;Unlocking New Revenue, Trust, and Loyalty in the Mobile
+                Market&quot;
+              </span>
+              .
               <span className="text-sm text-gray-500 block mt-1">
-                November 2025 · Virtual · By invitation only
+                October 2025 · 90-minute virtual session · Status: Invited, unable to attend
+                due to scheduling.
               </span>
             </p>
-          </article>
-
-          <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
-            <h3 className="text-lg font-semibold text-indigo-700">
-              Invited: Responsible AI &amp; Product Strategy Meetup
-            </h3>
-            <p className="mt-2 text-gray-700">
-              Community-led meetup focused on AI Product Management, ethics
-              frameworks, and enterprise deployment safety.
-              <span className="text-sm text-gray-500 block mt-1">
-                November 2025 · Sponsored by AI Product Institute
-              </span>
+            <p className="mt-2 text-xs text-gray-500">
+              Although I couldn&apos;t join this session, I treat these
+              invitations as signals that my work across broadband, edge
+              intelligence, and AI product strategy is aligned with where the
+              telecom industry is heading.
             </p>
           </article>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
