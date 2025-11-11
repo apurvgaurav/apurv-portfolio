@@ -1,224 +1,169 @@
 // app/page.tsx
-import Image from "next/image";
+
 import Link from "next/link";
 
-export const metadata = {
-  title: "Apurv Gaurav – Patent-Backed AI Product Leader",
-  description:
-    "Patent-backed AI Product Leader building edge-deployed, safety-first LLM systems. Focused on deterministic AI safety, privacy, and real-world reliability.",
-  keywords: [
-    "AI Product Manager",
-    "Edge AI",
-    "LLM Safety",
-    "AI Risk",
-    "Apurv Gaurav",
-    "AI Product Leadership",
-  ],
-};
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
-      {/* HERO SECTION */}
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-16 pt-20 md:grid-cols-2 md:pt-28 lg:px-8">
-        {/* Left side - photo */}
-        <div className="flex flex-col items-center justify-center gap-6 md:items-start">
-          <div className="relative">
-            {/* Glow behind card */}
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-emerald-400/60 via-sky-500/40 to-indigo-600/50 blur-xl" />
+    <div className="space-y-16">
+      {/* HERO */}
+      <section className="pt-8">
+        <p className="text-sm font-semibold tracking-wide text-indigo-600">
+          AI Product Leadership · Edge AI · LLM Safety
+        </p>
 
-            {/* Card with image */}
-            <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md shadow-slate-200/70">
-              <Image
-                src="/assets/apurv_photo.jpg"
-                alt="Apurv Gaurav"
-                width={360}
-                height={460}
-                priority
-                className="h-[440px] w-[340px] object-cover object-top md:h-[460px] md:w-[360px]"
-              />
-            </div>
-          </div>
+        <h1 className="mt-3 text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+          Patent-backed AI Product Leader
+          <br />
+          <span className="text-indigo-600">
+            building edge-deployed, safety-first LLM systems.
+          </span>
+        </h1>
 
-          <div className="rounded-full border border-emerald-500/40 bg-emerald-50 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-emerald-700 shadow-sm">
-            AI Product Leadership · Edge AI · LLM Safety
-          </div>
-        </div>
+        <p className="mt-4 text-lg text-gray-700 max-w-2xl">
+          I design and ship deterministic, audit-ready AI products—edge LLM
+          assistants, LLM risk triage, and code safety engines—built to meet
+          FAANG-level reliability, privacy, and compliance standards.
+        </p>
 
-        {/* Right side - headline */}
-        <div className="space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-            APURV GAURAV · AI PRODUCT MANAGER
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            Patent-backed AI Product Leader{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-700 to-emerald-600">
-              building edge-deployed, safety-first LLM systems.
-            </span>
-          </h1>
-          <p className="max-w-xl text-sm leading-relaxed text-slate-700 sm:text-base">
-            I design and ship deterministic, audit-ready AI products—Edge LLMs, LLM risk
-            triage, and code safety engines—built to meet FAANG-level reliability,
-            privacy, and compliance standards.
-          </p>
-
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Link
-              href="#"
-              className="rounded-full bg-sky-900 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-sky-900/40 transition duration-200 hover:-translate-y-[1px] hover:bg-sky-800"
-            >
-              Download Leadership Summary
-            </Link>
-            <Link
-              href="/patents"
-              className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm shadow-slate-200/70 transition duration-200 hover:-translate-y-[1px] hover:border-emerald-500 hover:text-emerald-700"
-            >
-              View Patents ↗
-            </Link>
-          </div>
-
-          <p className="pt-1 text-xs text-slate-500">
-            Or contact me directly ·{" "}
-            <Link
-              href="/contact"
-              className="text-emerald-700 hover:text-emerald-600 underline underline-offset-2"
-            >
-              Contact
-            </Link>
-          </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/contact"
+            className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition"
+          >
+            Book a 15-min conversation →
+          </Link>
+          <Link
+            href="/media"
+            className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:border-indigo-400 hover:text-indigo-600 transition"
+          >
+            View talks &amp; media
+          </Link>
         </div>
       </section>
 
-      {/* SNAPSHOT METRICS */}
-      <section className="mx-auto max-w-5xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-100">
-        <div className="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
+      {/* METRICS STRIP */}
+      <section>
+        <div className="grid gap-6 md:grid-cols-4 text-center">
           <div>
-            <p className="text-3xl font-bold text-sky-900">8</p>
-            <p className="mt-1 text-xs font-medium text-slate-600">
-              Utility patent applications filed
+            <div className="text-3xl font-bold text-gray-900">8</div>
+            <div className="mt-1 text-xs uppercase tracking-wide text-gray-500">
+              USPTO Filings
+            </div>
+            <p className="mt-1 text-[11px] text-gray-500">
+              Edge AI, LLM safety, privacy &amp; alignment.
             </p>
           </div>
+
           <div>
-            <p className="text-3xl font-bold text-sky-900">5</p>
-            <p className="mt-1 text-xs font-medium text-slate-600">
-              Production-ready prototypes
+            <div className="text-3xl font-bold text-gray-900">5</div>
+            <div className="mt-1 text-xs uppercase tracking-wide text-gray-500">
+              Production-Ready Prototypes
+            </div>
+            <p className="mt-1 text-[11px] text-gray-500">
+              Edge assistants, risk triage, code safety, and more.
             </p>
           </div>
+
           <div>
-            <p className="text-3xl font-bold text-sky-900">3</p>
-            <p className="mt-1 text-xs font-medium text-slate-600">
-              Research papers & deep dives
+            <div className="text-3xl font-bold text-gray-900">3</div>
+            <div className="mt-1 text-xs uppercase tracking-wide text-gray-500">
+              Research Papers &amp; Deep Dives
+            </div>
+            <p className="mt-1 text-[11px] text-gray-500">
+              Submitted to privacy, safety, and governance venues.
             </p>
           </div>
+
           <div>
-            <p className="text-3xl font-bold text-sky-900">250+</p>
-            <p className="mt-1 text-xs font-medium text-slate-600">
-              Pages of technical & product docs
+            <div className="text-3xl font-bold text-gray-900">250+</div>
+            <div className="mt-1 text-xs uppercase tracking-wide text-gray-500">
+              Pages of Technical Docs
+            </div>
+            <p className="mt-1 text-[11px] text-gray-500">
+              Architecture, patents, whitepapers, and design specs.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* QUICK OVERVIEW STRIP */}
+      <section className="grid gap-6 md:grid-cols-3">
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <h2 className="text-sm font-semibold text-gray-900 mb-1">
+            Edge AI &amp; Offline Intelligence
+          </h2>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            Architecting LLM assistants that run on-device, respect data
+            boundaries, and keep working when the network doesn&apos;t.
+          </p>
+          <Link
+            href="/demos"
+            className="mt-3 inline-flex text-xs font-semibold text-indigo-600 hover:text-indigo-700"
+          >
+            Explore demos →
+          </Link>
+        </div>
+
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <h2 className="text-sm font-semibold text-gray-900 mb-1">
+            Deterministic Safety &amp; Governance
+          </h2>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            Building rule-based risk engines for hallucination, bias, and policy
+            violations—designed for audit trails, not vibes.
+          </p>
+          <Link
+            href="/patents"
+            className="mt-3 inline-flex text-xs font-semibold text-indigo-600 hover:text-indigo-700"
+          >
+            See patent-backed work →
+          </Link>
+        </div>
+
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <h2 className="text-sm font-semibold text-gray-900 mb-1">
+            Product Strategy &amp; Execution
+          </h2>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            Turning research and IP into roadmaps, prototypes, and launch-ready
+            AI features that survive real-world constraints.
+          </p>
+          <Link
+            href="/experience"
+            className="mt-3 inline-flex text-xs font-semibold text-indigo-600 hover:text-indigo-700"
+          >
+            View experience →
+          </Link>
         </div>
       </section>
 
       {/* FOR HIRING MANAGERS STRIP */}
-      <section className="mx-auto mt-10 max-w-5xl rounded-2xl border border-emerald-200 bg-emerald-50/70 px-6 py-5 text-center shadow-sm shadow-emerald-100">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-800">
-          FOR HIRING MANAGERS
-        </h2>
-        <p className="mt-2 text-sm text-slate-800 sm:text-base">
-          You’re not hiring someone who is “getting into AI.” You’re hiring someone
-          already building edge-deployed LLM systems, deterministic safety layers, and
-          audit-ready governance with patents and prototypes to back it up.
+      <section className="rounded-2xl border border-indigo-100 bg-indigo-50 px-5 py-6 shadow-sm">
+        <p className="text-sm font-semibold text-indigo-900 mb-1">
+          For hiring managers &amp; recruiters
         </p>
-      </section>
-
-      {/* FEATURED PROJECTS */}
-      <section className="mx-auto mt-16 max-w-6xl px-6">
-        <h2 className="mb-6 text-center text-2xl font-semibold text-slate-900">
-          Flagship AI Systems
-        </h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          <ProjectCard
-            title="EdgeLLM V2: Privacy + Alignment"
-            description="Offline LLM assistant with self-forgetting memory and on-device alignment debugger for privacy-critical workflows."
-            tag="Edge AI · Privacy"
-            href="/patents#edge-llm-v2"
-          />
-          <ProjectCard
-            title="AI Risk Navigator"
-            description="Deterministic risk triage engine scoring hallucination, bias, and policy violations with reproducible vectors."
-            tag="LLM Safety · Governance"
-            href="/patents#ai-risk-navigator"
-          />
-          <ProjectCard
-            title="LLM Code Safety Auditor"
-            description="Offline, rule-based static analysis engine evaluating AI-generated code with OWASP-style checks."
-            tag="Code Safety · Compliance"
-            href="/patents#llm-code-safety-auditor"
-          />
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="mt-20 border-t border-slate-200 bg-white py-8 text-center text-sm text-slate-600">
-        <p>
-          “Ship AI products that legal, infra, and users can all trust.” —{" "}
-          <span className="font-medium">Apurv Gaurav</span>
+        <p className="text-xs text-indigo-900/90 max-w-3xl">
+          This portfolio is a live snapshot of how I think and build: patents,
+          research, and working demos across Edge AI, LLM safety, and privacy.
+          If you&apos;re exploring senior AI Product roles at FAANG-level
+          companies, I&apos;m happy to walk through the systems in detail with
+          your engineering and leadership teams.
         </p>
-        <div className="mt-3 flex justify-center gap-4 text-xs text-slate-500">
+        <div className="mt-3 flex flex-wrap gap-3">
           <Link
-            href="https://www.linkedin.com/in/apurvgaurav"
-            target="_blank"
-            className="hover:text-emerald-600"
+            href="/contact"
+            className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-700 transition"
           >
-            LinkedIn
+            Share a role or opportunity →
           </Link>
           <Link
-            href="mailto:apurvgaurav@gmail.com"
-            className="hover:text-emerald-600"
+            href="/media"
+            className="inline-flex items-center rounded-md border border-indigo-200 px-4 py-2 text-xs font-semibold text-indigo-900 hover:bg-indigo-100 transition"
           >
-            Email
-          </Link>
-          <Link href="/contact" className="hover:text-emerald-600">
-            Contact
+            Download leadership summary (coming soon)
           </Link>
         </div>
-      </footer>
-    </main>
-  );
-}
-
-/* --- Reusable components --- */
-
-type ProjectCardProps = {
-  title: string;
-  description: string;
-  tag: string;
-  href: string;
-};
-
-function ProjectCard({ title, description, tag, href }: ProjectCardProps) {
-  return (
-    <Link
-      href={href}
-      className="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-100 transition hover:-translate-y-[2px] hover:border-emerald-500/70 hover:shadow-md hover:shadow-emerald-500/15"
-    >
-      <div>
-        <p className="inline-flex items-center rounded-full bg-slate-100 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600">
-          {tag}
-        </p>
-        <h3 className="mt-3 text-base font-semibold text-slate-900">
-          {title}
-        </h3>
-        <p className="mt-2 text-xs leading-relaxed text-slate-600">
-          {description}
-        </p>
-      </div>
-      <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-sky-800 group-hover:text-sky-950">
-        View details
-        <span className="transition-transform duration-200 group-hover:translate-x-0.5">
-          →
-        </span>
-      </span>
-    </Link>
+      </section>
+    </div>
   );
 }

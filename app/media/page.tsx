@@ -78,6 +78,44 @@ export default function MediaPage() {
         </div>
       </section>
 
+      {/* Community Engagement */}
+      <section className="mt-4">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          Community Engagement
+        </h2>
+        <div className="space-y-6">
+          <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
+            <h3 className="text-lg font-semibold text-indigo-700">
+              Invited to AI Policy &amp; Leadership Roundtable
+            </h3>
+            <p className="mt-2 text-gray-700">
+              Received a LinkedIn invitation to attend a closed-door industry
+              session on{" "}
+              <span className="font-medium">
+                &quot;AI Governance and Product Responsibility&quot;
+              </span>{" "}
+              hosted by leading AI professionals.
+              <span className="text-sm text-gray-500 block mt-1">
+                November 2025 · Virtual · By invitation only
+              </span>
+            </p>
+          </article>
+
+          <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
+            <h3 className="text-lg font-semibold text-indigo-700">
+              Invited: Responsible AI &amp; Product Strategy Meetup
+            </h3>
+            <p className="mt-2 text-gray-700">
+              Community-led meetup focused on AI Product Management, ethics
+              frameworks, and enterprise deployment safety.
+              <span className="text-sm text-gray-500 block mt-1">
+                November 2025 · Sponsored by AI Product Institute
+              </span>
+            </p>
+          </article>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
         <p className="text-sm font-semibold text-slate-900">
