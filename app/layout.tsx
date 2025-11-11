@@ -123,7 +123,6 @@ export default function RootLayout({
             </Link>
           </p>
         </footer>
-
        
       </body>
     </html>
