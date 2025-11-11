@@ -29,8 +29,8 @@ export default function HomePage() {
               <Image
                 src="/assets/apurv_photo.jpg"
                 alt="Apurv Gaurav"
-                width={320}
-                height={380}
+                width={360}
+                height={460}
                 priority
                 className="h-[380px] w-[320px] object-cover"
               />
