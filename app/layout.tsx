@@ -1,53 +1,78 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import "./globals.css"; // <- this is the correct line
-
+import "./globals.css";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
-
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Apurv Gaurav | Patent-Backed AI Product Leader",
+  title: "Apurv Gaurav – Patent-Backed AI Product Leader",
   description:
-    "Apurv Gaurav is a patent-backed AI Product Leader focused on Edge AI, privacy, and deterministic AI safety frameworks for real-world systems.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    title: "Apurv Gaurav | Patent-Backed AI Product Leader",
-    description:
-      "Portfolio of Apurv Gaurav — AI Product Leader with 8 non-provisional USPTO filings focused on edge-deployed LLMs, deterministic safety, and code security.",
-    url: "https://apurvgaurav.ai",
-    siteName: "Apurv Gaurav",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Apurv Gaurav | Patent-Backed AI Product Leader",
-    description:
-      "Patent-backed AI Product Leader focused on Edge AI, privacy, and deterministic safety.",
-  },
+    "Patent-backed AI Product Leader focused on edge-deployed LLMs, AI safety, and deterministic governance. Building systems that infra, legal, and users can all trust.",
+  keywords: [
+    "AI Product Manager",
+    "Edge AI",
+    "LLM Safety",
+    "AI Risk",
+    "Deterministic AI",
+    "Apurv Gaurav",
+  ],
+  metadataBase: new URL("https://apurvgaurav.ai"),
 };
-
-
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Apurv Gaurav",
+    jobTitle: "AI Product Manager",
+    url: "https://apurvgaurav.ai",
+    image: "https://apurvgaurav.ai/assets/apurv_photo.jpg",
+    sameAs: [
+      "https://www.linkedin.com/in/apurvgaurav",
+      "mailto:apurvgaurav@gmail.com",
+    ],
+    knowsAbout: [
+      "Edge AI",
+      "Large Language Models",
+      "LLM Safety",
+      "AI Product Management",
+      "Risk Governance",
+      "Deterministic AI Systems",
+    ],
+  };
+
   return (
     <html lang="en">
+      <head>
+        {/* Structured data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body className="bg-slate-50 text-slate-900 antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-              {children}
-            </div>
-          </main>
-          <Footer />
+        <Header />
+        <div className="min-h-screen">
+          {children}
         </div>
+
+        {/* GA4 – replace G-XXXXXXX with your real Measurement ID */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXX');
+          `}
+        </Script>
       </body>
     </html>
   );
