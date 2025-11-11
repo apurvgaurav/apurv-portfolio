@@ -55,7 +55,7 @@ export default function ContactPage() {
 
         {/* MAIN LAYOUT */}
         <section className="mt-8 grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1.1fr)]">
-          {/* CONTACT FORM */}
+          {/* CONTACT FORM (STATIC) */}
           <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm shadow-slate-200/70">
             <h2 className="text-sm font-semibold text-slate-900">
               Send a message
