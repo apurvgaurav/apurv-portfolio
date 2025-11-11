@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="space-y-12">
       {/* HERO */}
-      <section className="pt-8">
+      <section className="pt-8 animate-fade-in-up">
         <div className="grid gap-10 md:grid-cols-2 items-center">
           {/* Left: Main pitch */}
           <div>
@@ -44,7 +44,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: Snapshot card to fill space */}
+          {/* Right: Snapshot card */}
           <div className="hidden md:block">
             <div className="relative rounded-3xl border border-gray-200 bg-white shadow-sm p-6">
               <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       {/* METRICS STRIP */}
-      <section className="bg-gray-50 py-8 rounded-2xl">
+      <section className="bg-gray-50 py-8 rounded-2xl animate-fade-in-up">
         <div className="grid gap-6 md:grid-cols-4 text-center">
           <div>
             <div className="text-3xl font-bold text-gray-900">8</div>
