@@ -1,5 +1,12 @@
 // app/contact/page.tsx
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact – Apurv Gaurav",
+  description:
+    "Get in touch regarding senior AI Product Management roles, collaborations, or speaking opportunities.",
+};
 
 export const metadata = {
   title: "Contact | Apurv Gaurav – AI Product, Edge AI & LLM Safety",
