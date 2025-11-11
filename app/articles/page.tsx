@@ -1,232 +1,128 @@
 // app/articles/page.tsx
+
 import Link from "next/link";
 
-export const metadata = {
-  title: "Articles | Apurv Gaurav – AI Product, Edge AI & LLM Safety",
-  description:
-    "Articles and deep dives on AI product strategy, edge-deployed LLMs, deterministic safety, and risk governance by Apurv Gaurav.",
-  keywords: [
-    "AI Product Manager",
-    "Edge AI",
-    "LLM Safety",
-    "AI Risk",
-    "Deterministic AI",
-    "Apurv Gaurav",
-  ],
-};
-
 type Article = {
-  slug: string;
   title: string;
-  tag: string;
-  readingTime: string;
-  oneLiner: string;
-  status?: "Published" | "Draft" | "Coming Soon";
+  summary: string;
+  publishedOn: string;
+  link: string;
 };
 
 const articles: Article[] = [
-  {
-    slug: "ai-pms-continuous-delivery",
-    title: "What AI PMs Can Learn from Continuous Delivery",
-    tag: "AI Product Strategy",
-    readingTime: "8 min read",
-    oneLiner:
-      "Using canaries, observability, and blast-radius control to design safer LLM products and rollouts.",
-    status: "Draft",
-  },
-  {
-    slug: "from-infra-to-intelligence",
-    title: "From Infra to Intelligence: Designing AI Products That Survive Production",
-    tag: "Systems Thinking",
-    readingTime: "9 min read",
-    oneLiner:
-      "Why AI products should be treated as end-to-end systems—data, infra, safety layers, and feedback loops—not just prompts and UI.",
-    status: "Coming Soon",
-  },
-  {
-    slug: "edgellm-v2-deep-dive",
-    title: "EdgeLLM V2 Deep Dive: Self-Forgetting Memory & On-Device Alignment",
-    tag: "Edge AI",
-    readingTime: "10 min read",
-    oneLiner:
-      "How vault-based memory and deterministic alignment debugging make edge-deployed LLMs viable for privacy-sensitive use cases.",
-    status: "Draft",
-  },
-  {
-    slug: "deterministic-ai-risk-scoring",
-    title: "Deterministic AI Risk Scoring: Lessons from AI Risk Navigator",
-    tag: "LLM Safety",
-    readingTime: "9 min read",
-    oneLiner:
-      "Designing reproducible risk scores for hallucination, bias, and policy violations that compliance and security can actually trust.",
-    status: "Coming Soon",
-  },
+  // ❗ Add only real, already-published articles here.
+  // Example format (uncomment & replace with real data):
+  //
+  // {
+  //   title: "What AI PMs Can Learn from Continuous Delivery",
+  //   summary:
+  //     "Connecting classic release engineering disciplines to modern AI product safety and iteration loops.",
+  //   publishedOn: "Nov 12, 2025",
+  //   link: "https://www.linkedin.com/posts/your-actual-post-url",
+  // },
 ];
 
 export default function ArticlesPage() {
-  return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto max-w-6xl px-4 pb-16 pt-12 md:px-6 lg:px-8">
-        {/* HERO */}
-        <section className="border-b border-slate-200 pb-8">
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-              ARTICLES & DEEP DIVES
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              How I think about{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-700">
-                AI products, edge systems, and LLM safety.
-              </span>
-            </h1>
-            <p className="max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              This is where I connect hands-on systems work, patent-backed architectures,
-              and AI product thinking—so you can see how I reason about tradeoffs, risk,
-              and real-world deployment.
-            </p>
-          </div>
-        </section>
+  const hasArticles = articles.length > 0;
 
-        {/* CONTENT + SIDEBAR */}
-        <section className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,2.2fr)_minmax(0,1fr)]">
-          {/* ARTICLES GRID */}
+  return (
+    <main className="max-w-5xl mx-auto px-4 py-16 space-y-10">
+      {/* Hero */}
+      <section>
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900">
+          Articles &amp; Writing
+        </h1>
+        <p className="mt-4 text-lg text-gray-700 max-w-3xl">
+          I use writing to clarify my thinking on AI product strategy, edge
+          intelligence, and deterministic safety systems. Published pieces live
+          primarily on LinkedIn.
+        </p>
+        <p className="mt-2 text-sm text-gray-500">
+          Only published articles are listed here. Drafts and planned series are
+          not included.
+        </p>
+        <div className="mt-4">
+          <a
+            href="https://www.linkedin.com/in/apurvgaurav"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-md border border-indigo-200 px-4 py-2 text-xs font-semibold text-indigo-900 hover:bg-indigo-50 transition"
+          >
+            View all writing on LinkedIn →
+          </a>
+        </div>
+      </section>
+
+      {/* Articles list or empty state */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Published Articles
+        </h2>
+
+        {hasArticles ? (
           <div className="space-y-4">
             {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+              <article
+                key={article.title}
+                className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {article.title}
+                  </h3>
+                  <span className="text-xs text-gray-500">
+                    {article.publishedOn}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-gray-700">{article.summary}</p>
+                <div className="mt-3">
+                  <a
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex text-xs font-semibold text-indigo-600 hover:text-indigo-700"
+                  >
+                    Read on LinkedIn →
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
-
-          {/* SIDEBAR: NEWSLETTER / BRIEFINGS */}
-          <aside className="space-y-5">
-            <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm shadow-slate-200/70">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-                AI PRODUCT BRIEFINGS
-              </p>
-              <h2 className="mt-2 text-sm font-semibold text-slate-900">
-                Get future deep dives in your inbox.
-              </h2>
-              <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                I occasionally share breakdowns on edge-deployed LLMs, deterministic risk
-                engines, and practical AI product patterns—no spam, no generic AI fluff.
-              </p>
-              {/* Static form for now – wire to tool later */}
-              <form className="mt-3 space-y-2" method="post" action="#">
-                <div className="space-y-1">
-                  <label
-                    htmlFor="email"
-                    className="text-[11px] font-medium text-slate-700"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="you@company.com"
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-900 outline-none transition focus:border-emerald-500 focus:bg-white"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-full bg-sky-900 px-3 py-2 text-xs font-semibold text-white shadow-sm shadow-sky-900/40 transition duration-200 hover:-translate-y-[1px] hover:bg-sky-800"
-                >
-                  Join AI Product briefings
-                </button>
-              </form>
-              <p className="mt-2 text-[11px] text-slate-400">
-                You can also follow my posts on{" "}
-                <Link
-                  href="https://www.linkedin.com/in/apurvgaurav"
-                  target="_blank"
-                  className="text-sky-700 underline-offset-4 hover:underline"
-                >
-                  LinkedIn
-                </Link>
-                .
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4 text-xs text-slate-800 shadow-sm shadow-emerald-100/70">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-700">
-                FOR RECRUITERS & HIRING MANAGERS
-              </p>
-              <p className="mt-2">
-                These articles show how I think about constraints, architecture, and
-                rollout—not just features. If you’re hiring for AI product, this is the
-                best shortcut to understand how I’d operate on your team.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-sky-800 underline-offset-4 hover:text-sky-950 hover:underline"
-              >
-                Reach out to discuss a role →
-              </Link>
-            </div>
-          </aside>
-        </section>
-      </div>
-    </main>
-  );
-}
-
-/* --- Components --- */
-
-type ArticleCardProps = {
-  article: Article;
-};
-
-function ArticleCard({ article }: ArticleCardProps) {
-  const { slug, title, tag, readingTime, oneLiner, status } = article;
-
-  // When you have real article pages, change href to `/articles/${slug}`.
-  const href = `/articles/${slug}`;
-
-  const statusBadge =
-    status === "Published"
-      ? "bg-emerald-100 text-emerald-800"
-      : status === "Draft"
-      ? "bg-amber-50 text-amber-800"
-      : "bg-slate-100 text-slate-700";
-
-  return (
-    <Link
-      href={href}
-      className="group flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm shadow-slate-200/60 transition duration-200 hover:-translate-y-1 hover:border-sky-500/70 hover:shadow-md hover:shadow-sky-500/20"
-    >
-      {/* Thumbnail substitute – gradient block */}
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-400/70 via-sky-500/80 to-indigo-700/80 shadow-sm shadow-emerald-400/40" />
-          <div className="space-y-1">
-            <p className="inline-flex items-center rounded-full bg-slate-100 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600">
-              {tag}
+        ) : (
+          <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-6 text-sm text-gray-600">
+            <p className="font-semibold text-gray-800 mb-1">
+              No articles listed yet.
             </p>
-            <p className="text-[11px] text-slate-500">{readingTime}</p>
+            <p>
+              As I publish long-form posts on LinkedIn, I&apos;ll add the most
+              relevant pieces here—with direct links and short summaries focused
+              on AI product leadership, edge intelligence, and deterministic
+              safety.
+            </p>
           </div>
-        </div>
-        {status && (
-          <span
-            className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-medium ${statusBadge}`}
-          >
-            {status}
-          </span>
         )}
-      </div>
+      </section>
 
-      <div className="space-y-1.5">
-        <h2 className="text-sm font-semibold text-slate-900">
-          {title}
-        </h2>
-        <p className="text-xs leading-relaxed text-slate-600">
-          {oneLiner}
+      {/* CTA for hiring managers */}
+      <section className="rounded-2xl border border-gray-200 bg-gray-50 px-5 py-6 shadow-sm">
+        <p className="text-sm font-semibold text-gray-900 mb-1">
+          For hiring managers &amp; recruiters
         </p>
-      </div>
-
-      <span className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-sky-800 group-hover:text-sky-950">
-        Read article
-        <span className="transition-transform duration-200 group-hover:translate-x-0.5">
-          →
-        </span>
-      </span>
-    </Link>
+        <p className="text-xs text-gray-700 max-w-3xl">
+          If you&apos;d like a curated reading list that matches an open role
+          (e.g., Edge AI PM, AI Safety PM, or Platform PM), I can share a
+          tailored set of articles and technical deep dives that best represent
+          how I think about product strategy, risk, and execution.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-3">
+          <Link
+            href="/contact"
+            className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-700 transition"
+          >
+            Request a curated reading list →
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
