@@ -4,45 +4,90 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12">
       {/* HERO */}
-      <section className="pt-8 max-w-4xl ml-auto">
-        <p className="text-sm font-semibold tracking-wide text-indigo-600">
-          AI Product Leadership · Edge AI · LLM Safety
-        </p>
+      <section className="pt-8">
+        <div className="grid gap-10 md:grid-cols-2 items-center">
+          {/* Left: Main pitch */}
+          <div>
+            <p className="text-sm font-semibold tracking-wide text-indigo-600">
+              AI Product Leadership · Edge AI · LLM Safety
+            </p>
 
-        <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-          Patent-backed AI Product Leader
-          <br />
-          <span className="text-indigo-700">
-            building edge-deployed, safety-first LLM systems.
-          </span>
-        </h1>
+            <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+              Patent-backed AI Product Leader
+              <br />
+              <span className="text-indigo-700">
+                building edge-deployed, safety-first LLM systems.
+              </span>
+            </h1>
 
-        <p className="mt-4 text-lg text-gray-700 max-w-2xl">
-          I design and ship deterministic, audit-ready AI products—edge LLM
-          assistants, LLM risk triage, and code safety engines—built to meet
-          FAANG-level reliability, privacy, and compliance standards.
-        </p>
+            <p className="mt-4 text-lg text-gray-700 max-w-2xl">
+              I design and ship deterministic, audit-ready AI products—edge LLM
+              assistants, LLM risk triage, and code safety engines—built to meet
+              FAANG-level reliability, privacy, and compliance standards.
+            </p>
 
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/contact"
-            className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow hover:shadow-md hover:-translate-y-0.5 transition"
-          >
-            Book a 15-min conversation →
-          </Link>
-          <Link
-            href="/media"
-            className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:border-indigo-400 hover:text-indigo-600 hover:-translate-y-0.5 hover:shadow-sm transition"
-          >
-            View talks &amp; media
-          </Link>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow hover:shadow-md hover:-translate-y-0.5 transition"
+              >
+                Book a 15-min conversation →
+              </Link>
+              <Link
+                href="/media"
+                className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:border-indigo-400 hover:text-indigo-600 hover:-translate-y-0.5 hover:shadow-sm transition"
+              >
+                View talks &amp; media
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: Snapshot card to fill space */}
+          <div className="hidden md:block">
+            <div className="relative rounded-3xl border border-gray-200 bg-white shadow-sm p-6">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                Snapshot
+              </p>
+              <p className="mt-2 text-sm text-gray-900 font-semibold">
+                Patent-backed AI Product Leader focused on:
+              </p>
+              <ul className="mt-3 space-y-2 text-xs text-gray-700">
+                <li>• Edge-deployed LLM assistants with strict privacy bounds</li>
+                <li>• Deterministic safety and governance around LLM outputs</li>
+                <li>• Turning IP into production-ready, compliant platforms</li>
+              </ul>
+
+              <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+                <div>
+                  <div className="text-xl font-bold text-gray-900">8</div>
+                  <div className="text-[10px] uppercase tracking-wide text-gray-500">
+                    USPTO Filings
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-gray-900">5</div>
+                  <div className="text-[10px] uppercase tracking-wide text-gray-500">
+                    Prototypes
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-gray-900">3</div>
+                  <div className="text-[10px] uppercase tracking-wide text-gray-500">
+                    Papers
+                  </div>
+                </div>
+              </div>
+
+              <div className="pointer-events-none absolute inset-x-[-10%] bottom-[-30%] h-32 bg-gradient-to-tr from-indigo-500/20 via-purple-500/10 to-transparent blur-3xl" />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* METRICS STRIP */}
-      <section className="bg-gray-50 py-10 rounded-2xl">
+      <section className="bg-gray-50 py-8 rounded-2xl">
         <div className="grid gap-6 md:grid-cols-4 text-center">
           <div>
             <div className="text-3xl font-bold text-gray-900">8</div>
@@ -87,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* QUICK OVERVIEW STRIP */}
-      <section className="grid gap-6 md:grid-cols-3 mt-12">
+      <section className="grid gap-6 md:grid-cols-3">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <h2 className="text-sm font-semibold text-gray-900 mb-1">
             Edge AI &amp; Offline Intelligence
