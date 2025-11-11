@@ -1,5 +1,12 @@
 // app/articles/page.tsx
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articles & Writing – Apurv Gaurav",
+  description:
+    "Published writing on AI Product Management, Edge AI, LLM Safety, and privacy-preserving systems. Selected long-form posts from LinkedIn.",
+};
 
 type Article = {
   title: string;
