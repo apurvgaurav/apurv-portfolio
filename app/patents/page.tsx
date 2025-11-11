@@ -1,4 +1,11 @@
 // app/patents/page.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Patents & AI Product Portfolio – Apurv Gaurav",
+  description:
+    "Eight patent-backed AI systems spanning Edge AI, LLM Safety, and Privacy + Alignment. Each project connects patents, demos, and research submissions.",
+};
 
 export default function PatentsPage() {
   const projects = [
