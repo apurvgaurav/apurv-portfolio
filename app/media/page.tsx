@@ -109,9 +109,9 @@ export default function MediaPage() {
       </span>
     </p>
     <p className="mt-2 text-sm text-gray-600">
-      Although I couldn't join this closed-door session, it reflected strong
-      alignment between my patent-backed work on deterministic AI safety and the
-      industry’s evolving governance standards.
+     Invited to participate in a leadership discussion on emerging AI governance
+  frameworks and product responsibility practices. The session aligns closely
+  with my patent-backed work on deterministic AI safety and policy design.
     </p>
   </article>
 
