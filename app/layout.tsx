@@ -55,6 +55,30 @@ export default function RootLayout({
 <meta name="twitter:description" content="Patent-backed AI Product Leader focused on Edge AI, LLM Safety, and Privacy + Alignment." />
 <meta name="twitter:image" content="/og-banner.png" />
 
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Apurv Gaurav",
+      url: "https://www.apurvgaurav.ai",
+      jobTitle: "AI Product Leader",
+      worksFor: {
+        "@type": "Organization",
+        name: "Independent Researcher",
+      },
+      sameAs: [
+        "https://www.linkedin.com/in/apurvgaurav",
+        "https://github.com/apurvgaurav",
+      ],
+      description:
+        "Patent-backed AI Product Leader specializing in Edge AI, LLM Safety, and Privacy + Alignment. 8 USPTO filings and 5 working prototypes.",
+    }),
+  }}
+/>
+
+
         <link rel="icon" href="/favicon.ico" />
         <meta
           property="og:image"
