@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Demos & Prototypes – Patent-Backed AI Systems – Apurv Gaurav",
+  description:
+    "Working demos built around patent-backed AI systems, including EdgeLLM V2, AI Risk Navigator, and LLM Code Safety Auditor.",
+};
+
 
 const demos = [
   {
