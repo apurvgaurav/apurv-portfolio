@@ -65,15 +65,7 @@ export default function ContactPage() {
               concrete questions and clear problems.
             </p>
 
-            <form
-              className="mt-4 space-y-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert(
-                  "Thanks for reaching out. Please send the same details via email to apurvgaurav@gmail.com so we can connect."
-                );
-              }}
-            >
+            <form className="mt-4 space-y-4" method="post" action="#">
               <div className="space-y-1">
                 <label
                   htmlFor="name"
@@ -133,8 +125,8 @@ export default function ContactPage() {
               </button>
 
               <p className="text-[11px] text-slate-400">
-                This form doesn’t store data on this site yet—please also send critical or
-                time-sensitive requests directly via email.
+                For now, this form is a visual placeholder. For time-sensitive topics,
+                please contact me directly via email or LinkedIn below.
               </p>
             </form>
           </div>
