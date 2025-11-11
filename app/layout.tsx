@@ -2,7 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/react";
+
 
 export const metadata: Metadata = {
   title: "Apurv Gaurav – Patent-Backed AI Product Leader",
@@ -124,7 +124,7 @@ export default function RootLayout({
           </p>
         </footer>
 
-        <Analytics />
+       
       </body>
     </html>
   );
