@@ -87,39 +87,58 @@ export default function MediaPage() {
 
       {/* Community Engagement */}
           {/* Community Engagement */}
-      <section className="mt-4">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-          Community Engagement
-        </h2>
-        <div className="space-y-6">
-          <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
-            <h3 className="text-lg font-semibold text-indigo-700">
-              Invited: Telecom Innovation &amp; Trust Roundtable
-            </h3>
-            <p className="mt-2 text-gray-700">
-              Personal invitation to a{" "}
-              <span className="font-medium">private virtual roundtable</span>{" "}
-              with senior leaders from Lyca Mobile, Three, Tango and others on:
-              <span className="font-medium">
-                {" "}
-                &quot;Unlocking New Revenue, Trust, and Loyalty in the Mobile
-                Market&quot;
-              </span>
-              .
-              <span className="text-sm text-gray-500 block mt-1">
-                October 2025 · 90-minute virtual session · Status: Invited, unable to attend
-                due to scheduling.
-              </span>
-            </p>
-            <p className="mt-2 text-xs text-gray-500">
-              Although I couldn&apos;t join this session, I treat these
-              invitations as signals that my work across broadband, edge
-              intelligence, and AI product strategy is aligned with where the
-              telecom industry is heading.
-            </p>
-          </article>
-        </div>
-      </section>
+      <section className="mt-10 space-y-6">
+  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+    Community Engagement
+  </h2>
+
+  {/* Invite 1 */}
+  <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
+    <h3 className="text-lg font-semibold text-indigo-700">
+      Invited: AI Policy &amp; Leadership Roundtable
+    </h3>
+    <p className="mt-2 text-gray-700">
+      Invitation to an industry session on{" "}
+      <span className="font-medium">
+        “AI Governance and Product Responsibility”
+      </span>{" "}
+      hosted by senior AI professionals and policy experts.
+      <span className="block text-sm text-gray-500 mt-1">
+        November&nbsp;2025 · Virtual · Status: Invited, unable to attend due to
+        scheduling
+      </span>
+    </p>
+    <p className="mt-2 text-sm text-gray-600">
+      Although I couldn't join this closed-door session, it reflected strong
+      alignment between my patent-backed work on deterministic AI safety and the
+      industry’s evolving governance standards.
+    </p>
+  </article>
+
+  {/* Invite 2 */}
+  <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
+    <h3 className="text-lg font-semibold text-indigo-700">
+      Invited: Telecom Innovation &amp; Trust Roundtable
+    </h3>
+    <p className="mt-2 text-gray-700">
+      Personal invitation to a private virtual roundtable with senior leaders
+      from Lyca&nbsp;Mobile, Three, Tango and others on{" "}
+      <span className="font-medium">
+        “Unlocking New Revenue, Trust, and Loyalty in the Mobile Market.”
+      </span>
+      <span className="block text-sm text-gray-500 mt-1">
+        October&nbsp;2025 · 90-minute virtual session · Status: Invited, unable
+        to attend due to scheduling
+      </span>
+    </p>
+    <p className="mt-2 text-sm text-gray-600">
+      Although I couldn't join this session, I treat these invitations as
+      signals that my work across broadband, edge intelligence, and AI product
+      strategy aligns with where the telecom industry is heading.
+    </p>
+  </article>
+</section>
+
 
 
       {/* CTA */}
