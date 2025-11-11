@@ -15,10 +15,10 @@ export default function Home() {
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-emerald-400/60 via-sky-500/40 to-indigo-600/50 blur-xl" />
               <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md shadow-slate-200/70">
              <Image
-  src="/assets/apurv_photo.png"
+  src="/assets/apurv_photo.jpg"
   alt="Apurv Gaurav"
-  width={500}
-  height={500}
+  width={320}
+  height={320}
   className="rounded-2xl shadow-xl"
 />
               </div>
