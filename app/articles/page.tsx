@@ -109,11 +109,8 @@ export default function ArticlesPage() {
                 I occasionally share breakdowns on edge-deployed LLMs, deterministic risk
                 engines, and practical AI product patterns—no spam, no generic AI fluff.
               </p>
-              {/* Fake form for now – wire to your tool later */}
-              <form
-                className="mt-3 space-y-2"
-                onSubmit={(e) => e.preventDefault()}
-              >
+              {/* Static form for now – wire to tool later */}
+              <form className="mt-3 space-y-2" method="post" action="#">
                 <div className="space-y-1">
                   <label
                     htmlFor="email"
