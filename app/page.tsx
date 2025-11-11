@@ -32,7 +32,7 @@ export default function HomePage() {
                 width={360}
                 height={460}
                 priority
-                className="h-[380px] w-[320px] object-cover"
+                className="h-[440px] w-[340px] object-cover object-top md:h-[460px] md:w-[360px]"
               />
             </div>
           </div>
