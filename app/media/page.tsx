@@ -1,6 +1,13 @@
 // app/media/page.tsx
 
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Talks, Appearances & Community Engagement – Apurv Gaurav",
+  description:
+    "Talk topics, guest lectures, and invite-only roundtables on AI governance, product responsibility, and edge intelligence.",
+};
 
 export default function MediaPage() {
   return (
