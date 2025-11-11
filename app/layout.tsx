@@ -2,6 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Apurv Gaurav – Patent-Backed AI Product Leader",
@@ -54,42 +55,51 @@ export default function RootLayout({
               Apurv Gaurav
             </Link>
             <nav className="flex gap-6 text-sm font-medium">
-              <Link href="/" className="hover:text-indigo-600 transition">
+              <Link
+                href="/"
+                className="nav-link hover:text-indigo-600 transition"
+              >
                 Home
               </Link>
               <Link
                 href="/experience"
-                className="hover:text-indigo-600 transition"
+                className="nav-link hover:text-indigo-600 transition"
               >
                 Experience
               </Link>
               <Link
                 href="/patents"
-                className="hover:text-indigo-600 transition"
+                className="nav-link hover:text-indigo-600 transition"
               >
                 Patents
               </Link>
               <Link
                 href="/research"
-                className="hover:text-indigo-600 transition"
+                className="nav-link hover:text-indigo-600 transition"
               >
                 Research
               </Link>
-              <Link href="/demos" className="hover:text-indigo-600 transition">
+              <Link
+                href="/demos"
+                className="nav-link hover:text-indigo-600 transition"
+              >
                 Demos
               </Link>
-              <Link href="/media" className="hover:text-indigo-600 transition">
+              <Link
+                href="/media"
+                className="nav-link hover:text-indigo-600 transition"
+              >
                 Media
               </Link>
               <Link
                 href="/articles"
-                className="hover:text-indigo-600 transition"
+                className="nav-link hover:text-indigo-600 transition"
               >
                 Articles
               </Link>
               <Link
                 href="/contact"
-                className="hover:text-indigo-600 transition"
+                className="nav-link hover:text-indigo-600 transition"
               >
                 Contact
               </Link>
@@ -113,6 +123,8 @@ export default function RootLayout({
             </Link>
           </p>
         </footer>
+
+        <Analytics />
       </body>
     </html>
   );
