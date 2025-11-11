@@ -6,15 +6,15 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* HERO */}
-      <section className="pt-8">
+      <section className="pt-8 max-w-4xl ml-auto">
         <p className="text-sm font-semibold tracking-wide text-indigo-600">
           AI Product Leadership · Edge AI · LLM Safety
         </p>
 
-        <h1 className="mt-3 text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+        <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900">
           Patent-backed AI Product Leader
           <br />
-          <span className="text-indigo-600">
+          <span className="text-indigo-700">
             building edge-deployed, safety-first LLM systems.
           </span>
         </h1>
@@ -28,13 +28,13 @@ export default function Home() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition"
+            className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow hover:shadow-md hover:-translate-y-0.5 transition"
           >
             Book a 15-min conversation →
           </Link>
           <Link
             href="/media"
-            className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:border-indigo-400 hover:text-indigo-600 transition"
+            className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:border-indigo-400 hover:text-indigo-600 hover:-translate-y-0.5 hover:shadow-sm transition"
           >
             View talks &amp; media
           </Link>
@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       {/* METRICS STRIP */}
-      <section>
+      <section className="bg-gray-50 py-10 rounded-2xl">
         <div className="grid gap-6 md:grid-cols-4 text-center">
           <div>
             <div className="text-3xl font-bold text-gray-900">8</div>
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       {/* QUICK OVERVIEW STRIP */}
-      <section className="grid gap-6 md:grid-cols-3">
+      <section className="grid gap-6 md:grid-cols-3 mt-12">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <h2 className="text-sm font-semibold text-gray-900 mb-1">
             Edge AI &amp; Offline Intelligence
