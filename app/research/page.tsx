@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Research & Publications – Apurv Gaurav",
+  description:
+    "Research work on edge-deployed LLMs, deterministic safety layers, governance, and privacy-preserving AI architectures.",
+};
 
 const researchItems = [
   {
