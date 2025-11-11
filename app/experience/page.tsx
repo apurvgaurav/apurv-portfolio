@@ -1,5 +1,12 @@
 // app/experience/page.tsx
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience – AI Product Leadership – Apurv Gaurav",
+  description:
+    "Career experience leading AI product strategy, platform initiatives, and patent-backed innovation in large-scale environments.",
+};
 
 export default function ExperiencePage() {
   return (
