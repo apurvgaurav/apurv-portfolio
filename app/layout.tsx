@@ -1,22 +1,39 @@
 // app/layout.tsx
-import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../components/Header";
-import Script from "next/script";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Apurv Gaurav – Patent-Backed AI Product Leader",
   description:
-    "Patent-backed AI Product Leader focused on edge-deployed LLMs, AI safety, and deterministic governance. Building systems that infra, legal, and users can all trust.",
+    "Apurv Gaurav is a patent-backed AI Product Leader specializing in Edge AI, LLM Safety, and Privacy + Alignment. 8 USPTO filings, production-ready prototypes, and research in responsible AI systems.",
+  metadataBase: new URL("https://www.apurvgaurav.ai"),
+  openGraph: {
+    title: "Apurv Gaurav – Patent-Backed AI Product Leader",
+    description:
+      "Patent-backed AI Product Leader in Edge AI, LLM Safety, and Privacy + Alignment.",
+    url: "https://www.apurvgaurav.ai",
+    siteName: "Apurv Gaurav",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apurv Gaurav – Patent-Backed AI Product Leader",
+    description:
+      "Patent-backed AI Product Leader in Edge AI, LLM Safety, and Privacy + Alignment.",
+  },
   keywords: [
+    "Apurv Gaurav",
     "AI Product Manager",
     "Edge AI",
     "LLM Safety",
-    "AI Risk",
-    "Deterministic AI",
-    "Apurv Gaurav",
+    "AI Privacy",
+    "Patent-backed AI Leader",
+    "AI Product Strategy",
   ],
-  metadataBase: new URL("https://apurvgaurav.ai"),
+  authors: [{ name: "Apurv Gaurav", url: "https://www.apurvgaurav.ai" }],
+  creator: "Apurv Gaurav",
+  publisher: "Apurv Gaurav",
 };
 
 export default function RootLayout({
@@ -24,55 +41,78 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Apurv Gaurav",
-    jobTitle: "AI Product Manager",
-    url: "https://apurvgaurav.ai",
-    image: "https://apurvgaurav.ai/assets/apurv_photo.jpg",
-    sameAs: [
-      "https://www.linkedin.com/in/apurvgaurav",
-      "mailto:apurvgaurav@gmail.com",
-    ],
-    knowsAbout: [
-      "Edge AI",
-      "Large Language Models",
-      "LLM Safety",
-      "AI Product Management",
-      "Risk Governance",
-      "Deterministic AI Systems",
-    ],
-  };
-
   return (
     <html lang="en">
-      <head>
-        {/* Structured data for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-      </head>
-      <body className="bg-slate-50 text-slate-900 antialiased">
-        <Header />
-        <div className="min-h-screen">
-          {children}
-        </div>
+      <body className="bg-gray-50 text-gray-900 antialiased">
+        {/* NAVIGATION BAR */}
+        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+          <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+            <Link
+              href="/"
+              className="text-lg font-semibold text-gray-900 hover:text-indigo-600 transition"
+            >
+              Apurv Gaurav
+            </Link>
+            <nav className="flex gap-6 text-sm font-medium">
+              <Link href="/" className="hover:text-indigo-600 transition">
+                Home
+              </Link>
+              <Link
+                href="/experience"
+                className="hover:text-indigo-600 transition"
+              >
+                Experience
+              </Link>
+              <Link
+                href="/patents"
+                className="hover:text-indigo-600 transition"
+              >
+                Patents
+              </Link>
+              <Link
+                href="/research"
+                className="hover:text-indigo-600 transition"
+              >
+                Research
+              </Link>
+              <Link href="/demos" className="hover:text-indigo-600 transition">
+                Demos
+              </Link>
+              <Link href="/media" className="hover:text-indigo-600 transition">
+                Media
+              </Link>
+              <Link
+                href="/articles"
+                className="hover:text-indigo-600 transition"
+              >
+                Articles
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-indigo-600 transition"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+        </header>
 
-        {/* GA4 – replace G-XXXXXXX with your real Measurement ID */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXX');
-          `}
-        </Script>
+        {/* MAIN PAGE CONTENT */}
+        <main className="max-w-6xl mx-auto px-6 py-10">{children}</main>
+
+        {/* FOOTER */}
+        <footer className="border-t border-gray-200 mt-16 py-8 text-center text-sm text-gray-500">
+          <p>
+            © {new Date().getFullYear()} Apurv Gaurav · Patent-Backed AI Product
+            Leader ·{" "}
+            <Link
+              href="https://www.apurvgaurav.ai"
+              className="text-indigo-600 hover:text-indigo-500"
+            >
+              apurvgaurav.ai
+            </Link>
+          </p>
+        </footer>
       </body>
     </html>
   );
