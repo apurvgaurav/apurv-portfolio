@@ -24,7 +24,10 @@ export default function HomePage() {
         {/* Left side - photo */}
         <div className="flex flex-col items-center justify-center gap-6 md:items-start">
           <div className="relative">
-            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-emerald-400/60 via-sky-500/40 to-indigo-600/50 blur-xl" />
+            {/* Glow behind card */}
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-emerald-400/60 via-sky-500/40 to-indigo-600/50 blur-xl" />
+
+            {/* Card with image */}
             <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md shadow-slate-200/70">
               <Image
                 src="/assets/apurv_photo.jpg"
@@ -33,8 +36,6 @@ export default function HomePage() {
                 height={460}
                 priority
                 className="h-[440px] w-[340px] object-cover object-top md:h-[460px] md:w-[360px]"
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-emerald-400/60 via-sky-500/40 to-indigo-600/50 blur-xl" />
-
               />
             </div>
           </div>
