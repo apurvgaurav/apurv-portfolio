@@ -46,6 +46,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+<meta property="og:title" content="Apurv Gaurav – Patent-Backed AI Product Leader" />
+<meta property="og:description" content="Building deterministic, audit-ready AI systems in Edge AI, LLM Safety, and Privacy + Alignment." />
+<meta property="og:image" content="/og-banner.png" />
+<meta property="og:url" content="https://www.apurvgaurav.ai" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Apurv Gaurav – Patent-Backed AI Product Leader" />
+<meta name="twitter:description" content="Patent-backed AI Product Leader focused on Edge AI, LLM Safety, and Privacy + Alignment." />
+<meta name="twitter:image" content="/og-banner.png" />
+
+        <link rel="icon" href="/favicon.ico" />
         <meta
           property="og:image"
           content="/og-banner.png"
