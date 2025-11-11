@@ -33,6 +33,8 @@ export default function HomePage() {
                 height={460}
                 priority
                 className="h-[440px] w-[340px] object-cover object-top md:h-[460px] md:w-[360px]"
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-emerald-400/60 via-sky-500/40 to-indigo-600/50 blur-xl" />
+
               />
             </div>
           </div>
