@@ -1,107 +1,214 @@
 // app/contact/page.tsx
+import Link from "next/link";
+
+export const metadata = {
+  title: "Contact | Apurv Gaurav – AI Product, Edge AI & LLM Safety",
+  description:
+    "Contact Apurv Gaurav to discuss AI Product roles, edge-deployed LLM systems, deterministic AI safety layers, and patent-backed AI platforms.",
+  keywords: [
+    "AI Product Manager",
+    "Edge AI",
+    "LLM Safety",
+    "AI Risk",
+    "Deterministic AI",
+    "Apurv Gaurav",
+    "AI Product Roles",
+  ],
+};
 
 export default function ContactPage() {
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <section className="space-y-3">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-          Let&apos;s Talk.
-        </h1>
-        <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-3xl">
-          The fastest way to reach me is email. I personally review every
-          relevant message and usually reply within two business days.
-        </p>
-      </section>
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="mx-auto max-w-4xl px-4 pb-16 pt-12 md:px-6 lg:px-8">
+        {/* AVAILABILITY BANNER */}
+        <section className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4 shadow-sm shadow-emerald-100/60">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-700">
+            AVAILABILITY
+          </p>
+          <div className="mt-2 flex flex-col gap-1 text-sm text-slate-900 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-semibold">
+              Open to AI Product / AI Systems roles in FAANG-level and high-bar teams.
+            </p>
+            <p className="text-xs text-slate-700">
+              Focus: Edge AI · LLM Safety · Deterministic Governance
+            </p>
+          </div>
+        </section>
 
-      {/* Direct Contact */}
-      <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
-        <p className="text-sm font-semibold text-slate-900">Direct Contact</p>
-        <div className="space-y-2 text-sm text-slate-700">
-          <p>
-            📧{" "}
-            <a
-              href="mailto:apurvgaurav@gmail.com"
-              className="text-blue-600 hover:text-blue-500 underline-offset-2 hover:underline"
+        {/* HEADER */}
+        <section className="border-b border-slate-200 pb-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
+            CONTACT
+          </p>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            Let’s talk about{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-700">
+              real AI products.
+            </span>
+          </h1>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            Whether you’re hiring for an AI Product role, exploring a specific edge/LLM
+            safety problem, or want a second brain on architecture and risk, I’m happy to
+            dive in. Short, direct conversations are usually the most useful—no fluff.
+          </p>
+        </section>
+
+        {/* MAIN LAYOUT */}
+        <section className="mt-8 grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1.1fr)]">
+          {/* CONTACT FORM */}
+          <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm shadow-slate-200/70">
+            <h2 className="text-sm font-semibold text-slate-900">
+              Send a message
+            </h2>
+            <p className="mt-1 text-xs text-slate-600">
+              Share a bit of context and how I can help. I usually respond faster to
+              concrete questions and clear problems.
+            </p>
+
+            <form
+              className="mt-4 space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert(
+                  "Thanks for reaching out. Please send the same details via email to apurvgaurav@gmail.com so we can connect."
+                );
+              }}
             >
-              apurvgaurav@gmail.com
-            </a>
-          </p>
-          <p>
-            🔗{" "}
-            <a
-              href="https://www.linkedin.com/in/apurv-gaurav/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-500 underline-offset-2 hover:underline"
-            >
-              linkedin.com/in/apurvgaurav
-            </a>
-          </p>
-        </div>
-      </section>
+              <div className="space-y-1">
+                <label
+                  htmlFor="name"
+                  className="text-[11px] font-medium text-slate-700"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-900 outline-none transition focus:border-emerald-500 focus:bg-white"
+                  required
+                />
+              </div>
 
-      {/* Role + Collaboration Cards */}
-      <section className="grid gap-4 md:grid-cols-2">
-        <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm space-y-3">
-          <p className="text-sm font-semibold text-slate-900">
-            For Roles (Hiring Managers / Recruiters)
-          </p>
-          <p className="text-xs text-slate-600 leading-relaxed">
-          If you&apos;re reaching out about a senior AI Product role or strategic
-leadership position, please include:
+              <div className="space-y-1">
+                <label
+                  htmlFor="email"
+                  className="text-[11px] font-medium text-slate-700"
+                >
+                  Work email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@company.com"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-900 outline-none transition focus:border-emerald-500 focus:bg-white"
+                  required
+                />
+              </div>
 
-          </p>
-          <ul className="text-xs text-slate-700 leading-relaxed list-disc list-inside space-y-1">
-            <li>Company, team, and level.</li>
-            <li>Location or remote expectations.</li>
-            <li>Compensation range / band (ballpark is fine).</li>
-            <li>
-              Why this role aligns with my focus on Edge AI, privacy, and
-              deterministic AI safety.
-            </li>
-          </ul>
-          <a
-            href="mailto:apurvgaurav@gmail.com?subject=Role%20Inquiry%20-%20AI%20Product%20Leader&body=Company%3A%0ATeam%20%2F%20Level%3A%0ALocation%20%2F%20Remote%3A%0AComp%20Band%20(approx.)%3A%0AWhy%20this%20role%20fits%3A"
-            className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-xs font-medium text-white shadow-sm hover:bg-blue-400 transition-colors"
-          >
-            Email About a Role
-          </a>
-        </div>
+              <div className="space-y-1">
+                <label
+                  htmlFor="message"
+                  className="text-[11px] font-medium text-slate-700"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What problem are you solving, and how can I help?"
+                  rows={5}
+                  className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-900 outline-none transition focus:border-emerald-500 focus:bg-white"
+                  required
+                />
+              </div>
 
-        <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm space-y-3">
-          <p className="text-sm font-semibold text-slate-900">
-            For Collaboration or Media
-          </p>
-          <p className="text-xs text-slate-600 leading-relaxed">
-            For collaborations, talks, podcasts, or guest lectures, please
-            include:
-          </p>
-          <ul className="text-xs text-slate-700 leading-relaxed list-disc list-inside space-y-1">
-            <li>Topic and format (talk, podcast, guest lecture, workshop).</li>
-            <li>Audience profile and approximate size.</li>
-            <li>Desired timing and timezone.</li>
-            <li>
-              Any specific outcomes you&apos;re targeting (recording, internal
-              training, public content, etc.).
-            </li>
-          </ul>
-          <a
-            href="mailto:apurvgaurav@gmail.com?subject=Collaboration%20or%20Media%20Inquiry&body=Topic%3A%0AFormat%3A%0AAudience%3A%0ATimeline%3A%0AExpected%20Outcome%3A"
-            className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-xs font-medium text-white shadow-sm hover:bg-blue-400 transition-colors"
-          >
-            Email About Collaboration
-          </a>
-        </div>
-      </section>
+              <button
+                type="submit"
+                className="w-full rounded-full bg-sky-900 px-3 py-2.5 text-xs font-semibold text-white shadow-sm shadow-sky-900/40 transition duration-200 hover:-translate-y-[1px] hover:bg-sky-800"
+              >
+                Submit message
+              </button>
 
-      {/* Closing */}
-      <section className="space-y-2">
-        <p className="text-sm text-slate-700 leading-relaxed">
-          I&apos;m selective about opportunities, but if the scope, ownership, and
-          problem space are a strong match, I&apos;ll come prepared.
-        </p>
-      </section>
-    </div>
+              <p className="text-[11px] text-slate-400">
+                This form doesn’t store data on this site yet—please also send critical or
+                time-sensitive requests directly via email.
+              </p>
+            </form>
+          </div>
+
+          {/* DIRECT LINKS / SHORT NOTE */}
+          <aside className="space-y-5">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm shadow-slate-200/70">
+              <h2 className="text-sm font-semibold text-slate-900">
+                Prefer direct contact?
+              </h2>
+              <p className="mt-1 text-xs text-slate-600">
+                If you already know what you’re looking for, these are the fastest ways
+                to reach me.
+              </p>
+
+              <div className="mt-3 space-y-2 text-xs">
+                <Link
+                  href="mailto:apurvgaurav@gmail.com"
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 transition hover:border-emerald-500 hover:bg-white"
+                >
+                  <span className="font-medium text-slate-800">
+                    Email
+                  </span>
+                  <span className="text-[11px] text-slate-600">
+                    apurvgaurav@gmail.com
+                  </span>
+                </Link>
+
+                <Link
+                  href="https://www.linkedin.com/in/apurvgaurav"
+                  target="_blank"
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 transition hover:border-emerald-500 hover:bg-white"
+                >
+                  <span className="font-medium text-slate-800">
+                    LinkedIn
+                  </span>
+                  <span className="text-[11px] text-slate-600">
+                    View profile & message ↗
+                  </span>
+                </Link>
+
+                <Link
+                  href="https://calendly.com"
+                  target="_blank"
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 transition hover:border-emerald-500 hover:bg-white"
+                >
+                  <span className="font-medium text-slate-800">
+                    Calendly
+                  </span>
+                  <span className="text-[11px] text-slate-600">
+                    Propose a 20–30 min call ↗
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-slate-900 px-4 py-4 text-xs text-slate-50 shadow-md shadow-slate-900/60">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-300/80">
+                FOR RECRUITERS & HIRING MANAGERS
+              </p>
+              <p className="mt-2">
+                If your team is working on edge-deployed LLMs, AI safety layers, or
+                production AI platforms and you want someone who already thinks in terms
+                of systems, risk, and rollout—not just prompts—let’s talk.
+              </p>
+              <p className="mt-2 text-[11px] text-slate-300">
+                Best use of our time: send 2–3 lines about your problem space and where
+                you think I might plug in. I’ll respond with concrete next steps, not
+                vague enthusiasm.
+              </p>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
   );
 }
