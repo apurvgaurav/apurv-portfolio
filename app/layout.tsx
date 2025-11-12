@@ -16,12 +16,14 @@ export const metadata: Metadata = {
     url: "https://www.apurvgaurav.ai",
     siteName: "Apurv Gaurav",
     type: "website",
+    images: ["/og-banner.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Apurv Gaurav – Patent-Backed AI Product Leader",
     description:
       "Patent-backed AI Product Leader in Edge AI, LLM Safety and Privacy + Alignment.",
+    images: ["/og-banner.png"],
   },
   keywords: [
     "Apurv Gaurav",
@@ -45,51 +47,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
-<meta property="og:title" content="Apurv Gaurav – Patent-Backed AI Product Leader" />
-<meta property="og:description" content="Building deterministic, audit-ready AI systems in Edge AI, LLM Safety, and Privacy + Alignment." />
-<meta property="og:image" content="/og-banner.png" />
-<meta property="og:url" content="https://www.apurvgaurav.ai" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Apurv Gaurav – Patent-Backed AI Product Leader" />
-<meta name="twitter:description" content="Patent-backed AI Product Leader focused on Edge AI, LLM Safety, and Privacy + Alignment." />
-<meta name="twitter:image" content="/og-banner.png" />
 
-        <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Apurv Gaurav",
-      url: "https://www.apurvgaurav.ai",
-      jobTitle: "AI Product Leader",
-      worksFor: {
-        "@type": "Organization",
-        name: "Independent Researcher",
-      },
-      sameAs: [
-        "https://www.linkedin.com/in/apurvgaurav",
-        "https://github.com/apurvgaurav",
-      ],
-      description:
-        "Patent-backed AI Product Leader specializing in Edge AI, LLM Safety, and Privacy + Alignment. 8 USPTO filings and 5 working prototypes.",
-    }),
-  }}
-/>
+        {/* Extra OG/Twitter image safety */}
+        <meta property="og:image" content="/og-banner.png" />
+        <meta name="twitter:image" content="/og-banner.png" />
 
-
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          property="og:image"
-          content="/og-banner.png"
-        />
-        <meta
-          name="twitter:image"
-          content="/og-banner.png"
-        />
+        {/* JSON-LD Schema */}
         <script
           type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
