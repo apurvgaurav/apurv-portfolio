@@ -68,7 +68,7 @@ export default function RootLayout({
               description:
                 "Patent-backed AI Product Leader specializing in Edge AI, LLM Safety, and Privacy + Alignment. 8 USPTO filings and production-ready prototypes.",
               sameAs: [
-                "https://www.linkedin.com/in/apurvgaurav",
+                "https://www.linkedin.com/in/apurv-gaurav/",
                 "https://github.com/apurvgaurav",
               ],
             }),
@@ -85,7 +85,7 @@ export default function RootLayout({
             © {new Date().getFullYear()} Apurv Gaurav · Patent-Backed AI Product
             Leader ·{" "}
             <Link
-              href="https://www.linkedin.com/in/apurvgaurav"
+              href="https://www.linkedin.com/in/apurv-gaurav/"
               className="text-indigo-600 hover:text-indigo-500"
             >
               LinkedIn

@@ -29,12 +29,15 @@ export default function Home() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/apurvgaurav/intro-20"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow hover:shadow-md hover:-translate-y-0.5 transition"
               >
-                Book a 15-min conversation →
-              </Link>
+                Book a 20-min call →
+              </a>
+
               <Link
                 href="/media"
                 className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:border-indigo-400 hover:text-indigo-600 hover:-translate-y-0.5 hover:shadow-sm transition"
@@ -188,11 +191,10 @@ export default function Home() {
           For hiring managers &amp; recruiters
         </p>
         <p className="text-xs text-indigo-900/90 max-w-3xl">
-          This portfolio is a live snapshot of how I think and build: patents,
+          This portfolio is a live snapshot of how I think and build—patents,
           research, and working demos across Edge AI, LLM safety, and privacy.
-          If you&apos;re exploring senior AI Product roles at FAANG-level
-          companies, I&apos;m happy to walk through the systems in detail with
-          your engineering and leadership teams.
+          If you&apos;re exploring AI Product roles, I&apos;m happy to walk
+          through the systems with your engineering and leadership teams.
         </p>
         <div className="mt-3 flex flex-wrap gap-3">
           <Link

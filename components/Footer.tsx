@@ -15,6 +15,7 @@ export default function Footer() {
               Deterministic AI Safety
             </p>
           </div>
+
           <div className="flex flex-wrap gap-4 text-xs">
             <a
               href="mailto:apurvgaurav@gmail.com"
@@ -22,14 +23,17 @@ export default function Footer() {
             >
               Email
             </a>
+
+            {/* Updated LinkedIn URL */}
             <a
-              href="https://linkedin.com/in/apurvgaurav"
+              href="https://www.linkedin.com/in/apurv-gaurav/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-300 transition-colors"
             >
               LinkedIn
             </a>
+
             <nav className="flex flex-wrap gap-3">
               <Link href="/" className="hover:text-blue-300 transition-colors">
                 Home
@@ -67,6 +71,7 @@ export default function Footer() {
             </nav>
           </div>
         </div>
+
         <div className="text-[11px] text-slate-400">
           © {year} Apurv Gaurav. All rights reserved.
         </div>
@@ -74,4 +79,3 @@ export default function Footer() {
     </footer>
   );
 }
-

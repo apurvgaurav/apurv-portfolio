@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function MediaPage() {
   return (
-    <div className="space-y-8">
+    <div className="max-w-6xl mx-auto px-6 py-8">
       {/* Hero */}
       <section className="bg-slate-900 text-slate-50 rounded-2xl px-6 py-8 sm:px-8 sm:py-10 shadow-sm">
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-3">
@@ -25,7 +25,7 @@ export default function MediaPage() {
       </section>
 
       {/* Intro */}
-      <section className="space-y-3">
+      <section className="mt-6">
         <p className="text-sm text-slate-700 leading-relaxed max-w-3xl">
           I&apos;m available for talks, guest lectures, and private briefings
           focused on Edge AI, deterministic safety, and patent-backed product
@@ -34,12 +34,13 @@ export default function MediaPage() {
         </p>
       </section>
 
-      {/* Topics */}
-      <section className="space-y-4">
+      {/* Core Topics */}
+      <section className="mt-8">
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">
           Core Topics
         </h2>
-        <div className="space-y-4">
+
+        <div className="mt-4 space-y-4">
           <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm">
             <p className="text-sm font-semibold text-slate-900 mb-1">
               Deterministic AI Safety in Production Systems
@@ -86,66 +87,62 @@ export default function MediaPage() {
       </section>
 
       {/* Community Engagement */}
-          {/* Community Engagement */}
-      <section className="mt-10 space-y-6">
-  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-    Community Engagement
-  </h2>
+      <section className="mt-8 space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Community Engagement
+        </h2>
 
-  {/* Invite 1 */}
-  <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
-    <h3 className="text-lg font-semibold text-indigo-700">
-      Invited: AI Policy &amp; Leadership Roundtable
-    </h3>
-    <p className="mt-2 text-gray-700">
-      Invitation to an industry session on{" "}
-      <span className="font-medium">
-        “AI Governance and Product Responsibility”
-      </span>{" "}
-      hosted by senior AI professionals and policy experts.
-      <span className="block text-sm text-gray-500 mt-1">
-        November&nbsp;2025 · Virtual · Status: Invited, unable to attend due to
-        scheduling
-      </span>
-    </p>
-    <p className="mt-2 text-sm text-gray-600">
-     Invited to participate in a leadership discussion on emerging AI governance
-  frameworks and product responsibility practices. The session aligns closely
-  with my patent-backed work on deterministic AI safety and policy design.
-    </p>
-  </article>
+        {/* Invite 1 */}
+        <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
+          <h3 className="text-lg font-semibold text-indigo-700">
+            Invited: AI Policy &amp; Leadership Roundtable
+          </h3>
+          <p className="mt-2 text-gray-700">
+            Invitation to an industry session on{" "}
+            <span className="font-medium">
+              “AI Governance and Product Responsibility”
+            </span>{" "}
+            hosted by senior AI professionals and policy experts.
+            <span className="block text-sm text-gray-500 mt-1">
+              November&nbsp;2025 · Virtual · Status: Invited, unable to attend
+              due to scheduling
+            </span>
+          </p>
+          <p className="mt-2 text-sm text-gray-600">
+            Invited to participate in a leadership discussion on emerging AI
+            governance frameworks and product responsibility practices. The
+            session aligns closely with my patent-backed work on deterministic
+            AI safety and policy design.
+          </p>
+        </article>
 
-  {/* Invite 2 */}
-  <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
-    <h3 className="text-lg font-semibold text-indigo-700">
-      Invited: Telecom Innovation &amp; Trust Roundtable
-    </h3>
-    <p className="mt-2 text-gray-700">
-      Personal invitation to a private virtual roundtable with senior leaders
-      from Lyca&nbsp;Mobile, Three, Tango and others on{" "}
-      <span className="font-medium">
-        “Unlocking New Revenue, Trust, and Loyalty in the Mobile Market.”
-      </span>
-      <span className="block text-sm text-gray-500 mt-1">
-        October&nbsp;2025 · 90-minute virtual session · Status: Invited, unable
-        to attend due to scheduling
-      </span>
-    </p>
-    <p className="mt-2 text-sm text-gray-600">
-      Although I couldn't join this session, I treat these invitations as
-      signals that my work across broadband, edge intelligence, and AI product
-      strategy aligns with where the telecom industry is heading.
-    </p>
-  </article>
-</section>
-
-
+        {/* Invite 2 */}
+        <article className="rounded-xl border border-gray-200 p-5 bg-white/70 shadow-sm">
+          <h3 className="text-lg font-semibold text-indigo-700">
+            Invited: Telecom Innovation &amp; Trust Roundtable
+          </h3>
+          <p className="mt-2 text-gray-700">
+            Personal invitation to a private virtual roundtable with senior
+            leaders from Lyca&nbsp;Mobile, Three, Tango and others on{" "}
+            <span className="font-medium">
+              “Unlocking New Revenue, Trust, and Loyalty in the Mobile Market.”
+            </span>
+            <span className="block text-sm text-gray-500 mt-1">
+              October&nbsp;2025 · 90-minute virtual session · Status: Invited,
+              unable to attend due to scheduling
+            </span>
+          </p>
+          <p className="mt-2 text-sm text-gray-600">
+            Although I couldn't join this session, I treat these invitations as
+            signals that my work across broadband, edge intelligence, and AI
+            product strategy aligns with where the telecom industry is heading.
+          </p>
+        </article>
+      </section>
 
       {/* CTA */}
-      <section className="bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
-        <p className="text-sm font-semibold text-slate-900">
-          Invite Me to Speak
-        </p>
+      <section className="mt-8 bg-white rounded-2xl px-5 py-6 shadow-sm border border-slate-100 space-y-3">
+        <p className="text-sm font-semibold text-slate-900">Invite Me to Speak</p>
         <p className="text-xs text-slate-600">
           For conference slots, internal tech talks, or guest lectures, include
           event name, audience, format, and proposed timing. I&apos;m happy to
